@@ -1,8 +1,12 @@
 {
-  "name": "Portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "Adrian Rampy personal portfolio site with projects, languages, and contact info",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ahrampy/portfolio.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
