@@ -2566,6 +2566,13 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+		/* background-color: rgba(255, 255, 255, 0.5); */
+		opacity: .65;
+		transition: 500ms;
+	}
+
+	.image:hover {
+		opacity: 1;
 	}
 
 		.image img {
