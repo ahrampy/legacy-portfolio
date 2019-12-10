@@ -1,0 +1,15 @@
+{
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "description": "Adrian Rampy personal portfolio site with projects, languages, and contact info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "particles.js": "^2.0.0"
+  }
+}
