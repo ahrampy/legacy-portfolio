@@ -1995,17 +1995,25 @@ input, select, textarea {
 
 		.features section {
 			padding: 3.5em 3em 1em 7em ;
-			width: 50%;
+			width: 25%;
 			border-top: solid 1px rgba(255, 255, 255, 0.15);
 			position: relative;
 		}
 
-			.features section:nth-child(-n + 2) {
+			.features section:nth-child(-n + 4) {
 				border-top-width: 0;
 			}
 
-			.features section:nth-child(2n) {
+			.features section:nth-child(1n) {
 				border-left: solid 1px rgba(255, 255, 255, 0.15);
+			}
+
+			.features section:first-child {
+				border-left: solid 0px rgba(255, 255, 255, 0.15);
+			}
+
+			.features section:nth-child(4n + 1) {
+				border-left: solid 0px rgba(255, 255, 255, 0.15);
 			}
 
 			.features section .icon {
@@ -2520,15 +2528,79 @@ input, select, textarea {
 		}
 
 		.icon.major {
-			width: 2.5em;
-			height: 2.5em;
+			width: 4em;
+			height: 4em;
 			display: block;
 			background: #ffffff;
 			border-radius: 100%;
 			color: #948C75;
 			text-align: center;
-			line-height: 2.5em;
+			line-height: 1em;
 			margin: 0 0 1.3em 0;
+		}
+
+		.icon.major.javascript {
+			background: url(../../images/icons/javascript.png) no-repeat center center;
+		}
+
+		.icon.major.ruby {
+			background: url(../../images/icons/ruby.png) no-repeat center center;
+		}
+
+		.icon.major.react {
+			background: url(../../images/icons/react.png) no-repeat center center;
+		}
+
+		.icon.major.redux {
+			background: url(../../images/icons/redux.png) no-repeat center center;
+		}
+
+		.icon.major.rails {
+			background: url(../../images/icons/rails.png) no-repeat center center;
+		}
+
+		.icon.major.node {
+			background: url(../../images/icons/node.png) no-repeat center center;
+		}
+
+		.icon.major.express {
+			background: url(../../images/icons/express.png) no-repeat center center;
+		}
+
+		.icon.major.mongodb {
+			background: url(../../images/icons/mongodb.png) no-repeat center center;
+		}
+
+		.icon.major.postgresql {
+			background: url(../../images/icons/postgresql.png) no-repeat center center;
+		}
+
+		.icon.major.html5 {
+			background: url(../../images/icons/html5.png) no-repeat center center;
+		}
+
+		.icon.major.css3 {
+			background: url(../../images/icons/css3.png) no-repeat center center;
+		}
+
+		.icon.major.git {
+			background: url(../../images/icons/gitbranch.png) no-repeat center center;
+		}
+
+		.icon.major.heroku {
+			background: url(../../images/icons/heroku.png) no-repeat center center;
+		}
+
+		.icon.major.jquery {
+			background: url(../../images/icons/jquery.png) no-repeat center center;
+		}
+
+		.icon.major.webpack {
+			background: url(../../images/icons/webpack.png) no-repeat center center;
+		}
+
+		.icon.major.google-maps {
+			background: url(../../images/icons/google-maps.png) no-repeat center center;
 		}
 
 			.icon.major:before {
