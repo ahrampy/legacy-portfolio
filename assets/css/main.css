@@ -3993,3 +3993,8 @@ input, select, textarea {
 
 		}
 
+/* One */
+
+		#one p {
+			font-size: 1.25em;
+		}
