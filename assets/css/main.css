@@ -2545,6 +2545,14 @@ input, select, textarea {
 			margin: 0 0 1.3em 0;
 		}
 
+		.icon.major.pic {
+			display: inline-block;
+			background: url(../../images/prof_pic.png) no-repeat center center;
+			background-size: 4em;
+			margin: 0 0 0 1.3em;
+			z-index: 3;
+		}
+
 		.icon.major.javascript {
 			background: url(../../images/icons/javascript.png) no-repeat center center;
 		}
