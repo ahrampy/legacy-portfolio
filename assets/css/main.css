@@ -2653,7 +2653,7 @@ input, select, textarea {
 		display: inline-block;
 		position: relative;
 		background-color: rgba(255, 255, 255, 0.5);
-		opacity: .65;
+		opacity: .90;
 		transition: 500ms;
 	}
 
@@ -4006,3 +4006,11 @@ input, select, textarea {
 		#one p {
 			font-size: 1.25em;
 		}
+/* 
+		#one .resume {
+			display: flex;
+			align-items: center;
+			width: 4em;
+			height: 4em;
+			margin-left: 1.5em;
+		} */
