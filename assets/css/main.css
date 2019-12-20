@@ -3968,7 +3968,7 @@ input, select, textarea {
 	#intro {
 		background-attachment: fixed;
 		background-image: url("/images/canoe.jpeg");
-		background-position: top center;
+		background-position: top left;
 		background-repeat: no-repeat;
 		background: url(/images/canoe.jpeg);
 		background-size: cover;
