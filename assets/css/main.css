@@ -3967,10 +3967,12 @@ input, select, textarea {
 
 	#intro {
 		background-attachment: fixed;
-		/* background-image: url("images/intro.svg"); */
-		background-position: top right;
+		background-image: url("/images/canoe.jpeg");
+		background-position: top center;
 		background-repeat: no-repeat;
-		background-size: 100% 100%;
+		background: url(/images/canoe.jpeg);
+		background-size: cover;
+		opacity: 0.85;
 	}
 
 		#intro p {
@@ -3994,10 +3996,6 @@ input, select, textarea {
 			}
 
 		@media screen and (max-width: 1280px) {
-
-			#intro {
-				background-attachment: scroll;
-			}
 
 		}
 

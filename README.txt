@@ -1,6 +1,6 @@
 
 
-Thanks to:
+Thanks toc:
 
 	Hyperspace by HTML5 UP
 		html5up.net | @ajlkn
