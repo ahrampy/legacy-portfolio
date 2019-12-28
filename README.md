@@ -1,4 +1,4 @@
-Visit Here: `#[Live Site](https://www.ahrampy.com)`
+[Visit Here](https://www.ahrampy.com)
 
 Thanks to:
 
