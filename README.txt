@@ -1,6 +1,6 @@
+Visit Here: [Live Site](https://www.ahrampy.com)
 
-
-Thanks toc:
+Thanks to:
 
 	Hyperspace by HTML5 UP
 		html5up.net | @ajlkn
