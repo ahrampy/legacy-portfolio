@@ -2617,9 +2617,9 @@ input, select, textarea {
 			background: url(../../images/icons/webpack.png) no-repeat center center;
 		}
 
-		/* .icon.major.babel {
+		.icon.major.babel {
 			background: url(../../images/icons/babel.png) no-repeat center center;
-		} */
+		}
 
 		.icon.major.google-maps {
 			background: url(../../images/icons/google-maps.png) no-repeat center center;
