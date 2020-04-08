@@ -2565,6 +2565,10 @@ input, select, textarea {
 			background: url(../../images/icons/react.png) no-repeat center center;
 		}
 
+		.icon.major.vue {
+			background: url(../../images/icons/vue.png) no-repeat center center;
+		}
+
 		.icon.major.redux {
 			background: url(../../images/icons/redux.png) no-repeat center center;
 		}
@@ -2597,13 +2601,17 @@ input, select, textarea {
 			background: url(../../images/icons/css3.png) no-repeat center center;
 		}
 
+		.icon.major.sass {
+			background: url(../../images/icons/sass.png) no-repeat center center;
+		}
+
 		.icon.major.git {
 			background: url(../../images/icons/gitbranch.png) no-repeat center center;
 		}
 
-		/* .icon.major.heroku {
+		.icon.major.heroku {
 			background: url(../../images/icons/heroku.png) no-repeat center center;
-		} */
+		}
 
 		.icon.major.firebase {
 			background: url(../../images/icons/firebase.png) no-repeat center center;
