@@ -1,7 +1,6 @@
 $(function () {
-  let $centerX = $("html").width() / 2;
-  let $centerY = $("html").height() / 2;
-  $(window).resize(() => {
+  var $centerX, $centerY;
+  $(window).on("load resize", () => {
     $centerX = $("html").width() / 2;
     $centerY = $("html").height() / 2;
   });
@@ -19,11 +18,19 @@ $(function () {
       ).toFixed(2)}deg)`
     );
   });
+  $("#techs").slick({
+    vertical: true,
+    autoplay: true,
+    arrows: false,
+    autoplaySpeed: 1000,
+    speed: 500,
+  });
   $(".tech-img").hover(
     (e) => {
       $("#tech-name").html(e.target.alt);
+      // $("tech-name").animate({typing 1s steps(10, end)})
     },
-    (e) => {
+    () => {
       $("#tech-name").html("");
     }
   );
