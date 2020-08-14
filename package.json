@@ -13,7 +13,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "particles.js": "^2.0.0"
-  }
+  "dependencies": {}
 }
