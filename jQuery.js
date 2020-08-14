@@ -1,17 +1,20 @@
 $(function () {
   let $centerX = $("html").width() / 2;
   let $centerY = $("html").height() / 2;
-  let $border = $("#border");
+  $("window").resize(
+    ($centerX = $("html").width() / 2),
+    ($centerY = $("html").height() / 2)
+  );
   $("html").mousemove((e) => {
-    $border.css(
+    $("#border").css(
       "transform",
       `rotateX(${(
-        ((e.offsetY - $centerY) * -1) /
-        $border.outerHeight() /
+        ((e.pageY - $centerY) * -1) /
+        $("#border").outerHeight() /
         2
       ).toFixed(2)}deg) rotateY(${(
-        (e.offsetX - $centerX) /
-        $border.outerWidth() /
+        (e.pageX - $centerX) /
+        $("#border").outerWidth() /
         2
       ).toFixed(2)}deg)`
     );
