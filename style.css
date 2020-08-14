@@ -13,7 +13,7 @@ body {
 button {
   font-family: inherit;
   font-size: large;
-  color: white;
+  color: rgb(195, 219, 255);
   width: 100px;
   height: 50px;
   margin: 20px;
@@ -24,6 +24,7 @@ button {
 }
 
 button:hover {
+  cursor: pointer;
   color: black;
   border-color: black;
 }
@@ -78,6 +79,8 @@ button:hover {
 }
 
 .tech-img:hover {
+    cursor: crosshair;
+
   filter: invert(100%);
 }
 
