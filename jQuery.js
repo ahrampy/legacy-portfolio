@@ -19,4 +19,12 @@ $(function () {
       ).toFixed(2)}deg)`
     );
   });
+  $(".tech-img").hover(
+    (e) => {
+      $("#tech-name").html(e.target.alt);
+    },
+    (e) => {
+      $("#tech-name").html("");
+    }
+  );
 });
