@@ -15,6 +15,13 @@ p {
   text-align: center;
 }
 
+button,
+div,
+span {
+  outline: none;
+  box-shadow: none;
+}
+
 #button-box {
   display: flex;
   justify-content: center;
@@ -81,11 +88,8 @@ button:focus {
   align-items: center;
   width: 80px;
   height: 80px;
-  /* display: grid;
-  grid-template-columns: repeat(5, auto); */
-  /* grid-gap: 10px; */
-  /* grid-auto-rows: minmax(100px, auto); */
   padding: 10px;
+  user-select: none;
 }
 
 .tech-img {

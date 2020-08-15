@@ -22,6 +22,7 @@ $(function () {
     vertical: true,
     autoplay: true,
     arrows: false,
+    accessibility: false,
     autoplaySpeed: 1000,
     speed: 500,
   });
