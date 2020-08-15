@@ -35,4 +35,10 @@ $(function () {
       $("#tech-name").html("");
     }
   );
+  $("#about-btn").click((e) => {
+    e.preventDefault();
+    $("#flip-card").css("transform", "rotateY(180deg)");
+    $("#techs").css("display", "none");
+
+  });
 });
