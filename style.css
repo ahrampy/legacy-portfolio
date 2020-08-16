@@ -175,12 +175,9 @@ button:focus {
     width: 80px;
     height: 80px;
   }
-  #button-holder {
-    flex-direction: row;
-  }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 1000px) {
+@media only screen and (orientation: landscape) and (max-width: 1024px) {
   h1 {
     font-size: large;
   }
@@ -191,9 +188,7 @@ button:focus {
     width: 80px;
     height: 80px;
   }
-  #button-holder {
-    flex-direction: column;
-  }
+
 }
 
 @media only screen and (orientation: landscape) and (max-height: 400px) {
@@ -202,16 +197,8 @@ button:focus {
   }
 }
 
-/* @media only screen and (orientation: landscape) {
-  h1 {
-    font-size: large;
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  #button-box {
+    flex-direction: row;
   }
-  #flip-holder {
-    width: 85vw;
-  }
-  #prof-pic {
-    width: 80px;
-    height: 80px;
-  }
-  
-} */
+}
