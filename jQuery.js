@@ -38,7 +38,7 @@ $(function () {
   $("#about-btn").click((e) => {
     e.preventDefault();
     $("#flip-card").css("transform", "rotateY(180deg)");
-    $("#techs").css("display", "none");
-
+    $("#techs").css("opacity", "0%");
+    $("#prof-pic").css("opacity", "0%");
   });
 });

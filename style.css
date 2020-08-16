@@ -111,8 +111,7 @@ button:focus {
   height: 130px;
   border-radius: 50%;
   filter: grayscale(100%);
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
+  transition: 0.2s;
 }
 
 #techs {
@@ -125,6 +124,7 @@ button:focus {
   height: 80px;
   padding: 10px;
   user-select: none;
+  transition: 0.2s;
 }
 
 .tech-img {
