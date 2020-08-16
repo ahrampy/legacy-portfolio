@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -98,7 +98,6 @@ button:focus {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  /* padding: 3vw; */
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
@@ -149,3 +148,70 @@ button:focus {
 #tech-name {
   padding: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: medium;
+  }
+
+  #button-box {
+    flex-direction: column;
+  }
+  #prof-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  #flip-holder {
+    width: 75vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: large;
+  }
+  #prof-pic {
+    width: 80px;
+    height: 80px;
+  }
+  #button-holder {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1000px) {
+  h1 {
+    font-size: large;
+  }
+  #flip-holder {
+    width: 85vw;
+  }
+  #prof-pic {
+    width: 80px;
+    height: 80px;
+  }
+  #button-holder {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 400px) {
+  #tech-name {
+    opacity: 0%;
+  }
+}
+
+/* @media only screen and (orientation: landscape) {
+  h1 {
+    font-size: large;
+  }
+  #flip-holder {
+    width: 85vw;
+  }
+  #prof-pic {
+    width: 80px;
+    height: 80px;
+  }
+  
+} */

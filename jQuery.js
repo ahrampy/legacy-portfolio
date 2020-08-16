@@ -27,10 +27,13 @@ $(function () {
     speed: 500,
     zIndex: 1,
   });
+  $("#techs").on("beforeChange", (e, slick, curr) => {
+    $("#tech-name").html("");
+    // $(".tech-img").css("filter", "invert(0%)");
+  });
   $(".tech-img").hover(
     (e) => {
       $("#tech-name").html(e.target.alt);
-      // $("tech-name").animate({typing 1s steps(10, end)})
     },
     () => {
       $("#tech-name").html("");
