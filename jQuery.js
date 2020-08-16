@@ -25,6 +25,7 @@ $(function () {
     accessibility: false,
     autoplaySpeed: 1000,
     speed: 500,
+    zIndex: 1,
   });
   $(".tech-img").hover(
     (e) => {
@@ -38,7 +39,19 @@ $(function () {
   $("#about-btn").click((e) => {
     e.preventDefault();
     $("#flip-card").css("transform", "rotateY(180deg)");
-    $("#techs").css("opacity", "0%");
-    $("#prof-pic").css("opacity", "0%");
+    $("#techs").slick("slickPause");
+    setTimeout(() => {
+      $("#prof-pic").css("opacity", "0%");
+      $("#techs").css("opacity", "0%");
+    }, 200);
+  });
+  $("#back-btn").click((e) => {
+    e.preventDefault();
+    $("#flip-card").css("transform", "rotateY(0deg)");
+    $("#techs").slick("slickPlay");
+    setTimeout(() => {
+      $("#techs").css("opacity", "100%");
+      $("#prof-pic").css("opacity", "100%");
+    }, 200);
   });
 });

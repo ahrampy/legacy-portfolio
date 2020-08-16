@@ -20,6 +20,7 @@ div,
 span {
   outline: none;
   box-shadow: none;
+  z-index: 2;
 }
 
 #button-box {
@@ -136,7 +137,6 @@ button:focus {
 }
 
 .tech-img:hover {
-  cursor: crosshair;
   filter: invert(100%);
 }
 
