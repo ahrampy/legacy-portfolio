@@ -20,7 +20,6 @@ div,
 span {
   outline: none;
   box-shadow: none;
-  z-index: 2;
 }
 
 #button-box {
@@ -40,6 +39,7 @@ button {
   margin: 1vw;
   border: 1px solid white;
   transition: 0.35s;
+  z-index: 2;
 }
 
 button:hover,
@@ -98,8 +98,12 @@ button:focus {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+#flip-card-front {
+  transition: 0.3s;
 }
 
 #flip-card-back {
@@ -129,11 +133,11 @@ button:focus {
   transform: rotateZ(180deg);
 }
 
-#resume iframe {
+#resume > iframe {
   width: 60vw;
   height: 80vh;
   margin: 0 20vw 0 20vw;
-  z-index: 3;
+  z-index: 1;
 }
 
 #contact {
@@ -186,7 +190,7 @@ button:focus {
   padding: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   body {
     font-size: medium;
   }
@@ -201,6 +205,11 @@ button:focus {
 
   #flip-holder {
     width: 75vw;
+  }
+
+  #resume > iframe {
+    height: 70vh;
+    width: 95vw;
   }
 }
 
@@ -218,12 +227,19 @@ button:focus {
   h1 {
     font-size: large;
   }
+    #button-box {
+    flex-direction: row;
+  }
   #flip-holder {
     width: 85vw;
   }
   #prof-pic {
     width: 80px;
     height: 80px;
+  }
+  #resume > iframe {
+    height: 65vh;
+    width: 95vw;
   }
 }
 

@@ -29,7 +29,6 @@ $(function () {
   });
   $("#techs").on("beforeChange", (e, slick, curr) => {
     $("#tech-name").html("");
-    // $(".tech-img").css("filter", "invert(0%)");
   });
   $(".tech-img").hover(
     (e) => {
@@ -41,6 +40,7 @@ $(function () {
   );
   $("#about-btn").click((e) => {
     e.preventDefault();
+    $("#flip-card-front").css("opacity", "0%");
     $("#about").css("display", "inline-block");
     $("#about").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(180deg)");
@@ -49,6 +49,7 @@ $(function () {
   $("#about-back").click((e) => {
     e.preventDefault();
     $("#about").css("opacity", "0%");
+    $("#flip-card-front").css("opacity", "100%");
     setTimeout(() => {
       $("#about").css("display", "none");
     }, 300);
@@ -57,6 +58,8 @@ $(function () {
   });
   $("#projects-btn").click((e) => {
     e.preventDefault();
+    $("#flip-card-front").css("opacity", "0%");
+
     $("#projects").css("display", "inline-block");
     $("#projects").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(180deg)");
@@ -64,6 +67,8 @@ $(function () {
   $("#projects-back").click((e) => {
     e.preventDefault();
     $("#projects").css("opacity", "0%");
+    $("#flip-card-front").css("opacity", "100%");
+
     setTimeout(() => {
       $("#projects").css("display", "none");
     }, 300);
@@ -72,6 +77,8 @@ $(function () {
   });
   $("#resume-btn").click((e) => {
     e.preventDefault();
+    $("#flip-card-front").css("opacity", "0%");
+
     $("#resume").css("display", "inline-block");
     $("#resume").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(-180deg)");
@@ -79,6 +86,8 @@ $(function () {
   $("#resume-back").click((e) => {
     e.preventDefault();
     $("#resume").css("opacity", "0%");
+    $("#flip-card-front").css("opacity", "100%");
+
     setTimeout(() => {
       $("#resume").css("display", "none");
     }, 300);
@@ -87,6 +96,8 @@ $(function () {
   });
   $("#contact-btn").click((e) => {
     e.preventDefault();
+    $("#flip-card-front").css("opacity", "0%");
+
     $("#contact").css("display", "inline-block");
     $("#contact").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(-180deg)");
@@ -95,6 +106,7 @@ $(function () {
   $("#contact-back").click((e) => {
     e.preventDefault();
     $("#contact").css("opacity", "0%");
+    $("#flip-card-front").css("opacity", "100%");
     setTimeout(() => {
       $("#contact").css("display", "none");
     }, 300);
