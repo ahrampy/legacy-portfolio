@@ -126,26 +126,21 @@ button:focus {
 
 #projects {
   display: none;
-  /* width: 80%;
-  height: 80%; */
   opacity: 0;
   transition: 0.3s;
   transform: rotateZ(180deg);
 }
 
-#project-card-holder {
+#project-slider {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 200px;
-  height: 100px;
-  /* z-index: 3; */
 }
 
 .project-card {
-  /* width: 50px;
-  height: 100px; */
+  width: fit-content;
+  height: fit-content;
   margin: 5%;
   padding: 5%;
 }
@@ -204,8 +199,8 @@ button:focus {
 }
 
 .project-card img {
-  /* width: 50px;
-  height: 50px; */
+  width: 200px;
+  height: 200px;
 }
 
 #resume {

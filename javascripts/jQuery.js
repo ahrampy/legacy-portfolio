@@ -55,40 +55,15 @@ $(function () {
       $("#tech-name").css("opacity", "0%");
     }
   );
-  $("#project-card-holder").slick({
-    //   // normal options...
-    //   // vertical: false,
-    arrows: false,
-    dots: true
-    //   slidesToShow: 1,
-    //   autoplay: true,
-    //   // accessibility: false,
-    //   // mobileFirst: true,
-    //   autoplaySpeed: 1000,
-    //   speed: 500,
-    //   zIndex: 1,
-
-    //   // the magic
-    //   // responsive: [
-    //   //   {
-    //   //     breakpoint: 1024,
-    //   //     settings: {
-    //   //       slidesToShow: 1,
-    //   //     },
-    //   //   },
-    //   //   {
-    //   //     breakpoint: 600,
-    //   //     settings: {
-    //   //       slidesToShow: 2,
-    //   //       dots: true,
-    //   //     },
-    //   //   },
-    //   //   {
-    //   //     breakpoint: 300,
-    //   //     settings: "unslick", // destroys slick
-    //   //   },
-    //   // ],
-  });
+  // $("#project-slider").slick({
+  //   autoplay: true,
+  //   arrows: false,
+  //   accessibility: false,
+  //   autoplaySpeed: 1000,
+  //   slidesToShow: 3,
+  //   speed: 500,
+  //   zIndex: 3,
+  // });
   $("#about-btn").click((e) => {
     e.preventDefault();
     $("#flip-card-front").css("opacity", "0%");
