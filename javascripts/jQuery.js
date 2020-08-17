@@ -1,26 +1,38 @@
 $(function () {
   var $centerX, $centerY;
+  var tracking = true;
   $(window).on("load resize", () => {
     $centerX = $("#border-container").width() / 2;
     $centerY = $("#border-container").height() / 2;
   });
   $("#border-container").mousemove((e) => {
-    $("#border").css(
-      "transform",
-      `rotateX(${(
-        ((e.pageY - $centerY) * -1) /
-        $("#border").outerHeight() /
-        2
-      ).toFixed(2)}deg) rotateY(${(
-        (e.pageX - $centerX) /
-        $("#border").outerWidth() /
-        2
-      ).toFixed(2)}deg)`
-    );
+    if (tracking) {
+      $("#border").css(
+        "transform",
+        `rotateX(${(
+          ((e.pageY - $centerY) * -1) /
+          $("#border").outerHeight() /
+          2
+        ).toFixed(2)}deg) rotateY(${(
+          (e.pageX - $centerX) /
+          $("#border").outerWidth() /
+          2
+        ).toFixed(2)}deg)`
+      );
+    }
   });
   $("#resume > iframe").attr(
     "src",
     "http://docs.google.com/viewer?url=https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/export?format=pdf&embedded=true"
+  );
+  $("#resume > iframe").hover(
+    () => {
+      tracking = false;
+      $("#border").css("transform", "none");
+    },
+    () => {
+      tracking = true;
+    }
   );
   $("#techs").slick({
     vertical: true,
@@ -81,6 +93,8 @@ $(function () {
   });
   $("#resume-btn").click((e) => {
     e.preventDefault();
+    tracking = false;
+    $("#border").css("transform", "none");
     $("#flip-card-front").css("opacity", "0%");
 
     $("#resume").css("display", "inline-block");
@@ -89,6 +103,7 @@ $(function () {
   });
   $("#resume-back").click((e) => {
     e.preventDefault();
+    tracking = true;
     $("#resume").css("opacity", "0%");
     $("#flip-card-front").css("opacity", "100%");
 
