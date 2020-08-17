@@ -107,14 +107,14 @@ button:focus {
 }
 
 #about {
-  position: absolute;
+  /* position: absolute; */
   display: none;
   opacity: 0;
   transition: 0.3s;
 }
 
 #projects {
-  position: absolute;
+  /* position: absolute; */
   display: none;
   opacity: 0;
   transition: 0.3s;
@@ -122,15 +122,22 @@ button:focus {
 }
 
 #resume {
-  position: absolute;
+  /* position: absolute; */
   display: none;
   opacity: 0;
   transition: 0.3s;
   transform: rotateZ(180deg);
 }
 
+#resume iframe {
+  width: 60vw;
+  height: 80vh;
+  margin: 0 20vw 0 20vw;
+  z-index: 3;
+}
+
 #contact {
-  position: absolute;
+  /* position: absolute; */
   display: none;
   opacity: 0;
   transition: 0.3s;
