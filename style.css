@@ -8,16 +8,23 @@ body {
   min-height: 100%;
   margin: 0;
   padding: 0;
+  transition: 0.2s;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 h1,
-p {
+p,
+a {
   text-align: center;
 }
 
 button,
 div,
-span {
+span,
+a {
   outline: none;
   box-shadow: none;
 }
@@ -59,7 +66,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   margin: 2%;
-  perspective: 80px;
+  perspective: 70px;
 }
 
 #border {
@@ -111,14 +118,12 @@ button:focus {
 }
 
 #about {
-  /* position: absolute; */
   display: none;
   opacity: 0;
   transition: 0.3s;
 }
 
 #projects {
-  /* position: absolute; */
   display: none;
   opacity: 0;
   transition: 0.3s;
@@ -126,7 +131,6 @@ button:focus {
 }
 
 #resume {
-  /* position: absolute; */
   display: none;
   opacity: 0;
   transition: 0.3s;
@@ -141,7 +145,6 @@ button:focus {
 }
 
 #contact {
-  /* position: absolute; */
   display: none;
   opacity: 0;
   transition: 0.3s;
@@ -227,7 +230,7 @@ button:focus {
   h1 {
     font-size: large;
   }
-    #button-box {
+  #button-box {
     flex-direction: row;
   }
   #flip-holder {

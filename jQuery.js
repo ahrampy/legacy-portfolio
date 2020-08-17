@@ -1,10 +1,10 @@
 $(function () {
   var $centerX, $centerY;
   $(window).on("load resize", () => {
-    $centerX = $("html").width() / 2;
-    $centerY = $("html").height() / 2;
+    $centerX = $("#border-container").width() / 2;
+    $centerY = $("#border-container").height() / 2;
   });
-  $("html").mousemove((e) => {
+  $("#border-container").mousemove((e) => {
     $("#border").css(
       "transform",
       `rotateX(${(
@@ -18,6 +18,10 @@ $(function () {
       ).toFixed(2)}deg)`
     );
   });
+  $("#resume > iframe").attr(
+    "src",
+    "http://docs.google.com/viewer?url=https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/export?format=pdf&embedded=true"
+  );
   $("#techs").slick({
     vertical: true,
     autoplay: true,
