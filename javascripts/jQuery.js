@@ -21,10 +21,10 @@ $(function () {
       );
     }
   });
-  $("#resume > iframe").attr(
-    "src",
-    "http://docs.google.com/viewer?url=https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/export?format=pdf&embedded=true"
-  );
+  // $("#resume > iframe").attr(
+  //   "src",
+  //   "http://docs.google.com/viewer?url=https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/export?format=pdf&embedded=true"
+  // );
   $("#resume > iframe").hover(
     () => {
       tracking = false;
@@ -49,11 +49,46 @@ $(function () {
   $(".tech-img").hover(
     (e) => {
       $("#tech-name").html(e.target.alt);
+      $("#tech-name").css("opacity", "100%");
     },
     () => {
-      $("#tech-name").html("");
+      $("#tech-name").css("opacity", "0%");
     }
   );
+  $("#project-card-holder").slick({
+    //   // normal options...
+    //   // vertical: false,
+    arrows: false,
+    dots: true
+    //   slidesToShow: 1,
+    //   autoplay: true,
+    //   // accessibility: false,
+    //   // mobileFirst: true,
+    //   autoplaySpeed: 1000,
+    //   speed: 500,
+    //   zIndex: 1,
+
+    //   // the magic
+    //   // responsive: [
+    //   //   {
+    //   //     breakpoint: 1024,
+    //   //     settings: {
+    //   //       slidesToShow: 1,
+    //   //     },
+    //   //   },
+    //   //   {
+    //   //     breakpoint: 600,
+    //   //     settings: {
+    //   //       slidesToShow: 2,
+    //   //       dots: true,
+    //   //     },
+    //   //   },
+    //   //   {
+    //   //     breakpoint: 300,
+    //   //     settings: "unslick", // destroys slick
+    //   //   },
+    //   // ],
+  });
   $("#about-btn").click((e) => {
     e.preventDefault();
     $("#flip-card-front").css("opacity", "0%");
