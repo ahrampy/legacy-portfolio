@@ -6,19 +6,19 @@
     <title>portfolio</title>
     <link rel=icon href=images/ar.ico>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/breakpoints.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="jQuery.js"></script>
+    <script src="javascripts/jQuery.js"></script>
     <link
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
     />
-    <!-- <link rel="prefetch" href="http://docs.google.com/viewer?url=https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/export?format=pdf&embedded=true"> -->
   </head>
   <body>
     <div id="border-container">
@@ -86,6 +86,11 @@
                   class="tech-img"
                   alt="firebase"
                 />
+                <img
+                  src="./images/icons/webpack.png"
+                  class="tech-img"
+                  alt="webpack"
+                />
               </div>
               <div id="tech-name-box">
                 <span id="tech-name"></span>
@@ -111,15 +116,46 @@
               </div>
               <div id="projects">
                 <h1>projects</h1>
-                <p>
-                  ho hum
-                </p>
+                <div id="project-card-holder">
+                  <div class="project-card">
+                    <h2 class="project-title">towertime</h2>
+                    <a href="https://towertime.herokuapp.com/">
+                      <img src="images/towertime.png" alt="towertime" />
+                    </a>
+                    <p class="project-description">
+                      this is tower time
+                    </p>
+                  </div>
+                  <div class="project-card">
+                    <h2 class="project-title">flipcamp</h2>
+                    <a href="https://towertime.herokuapp.com/">
+                      <img src="images/flipcamp.png" alt="towertime" />
+                    </a>
+                    <p class="project-description">
+                      this is flip camp
+                    </p>
+                  </div>
+                  <div class="project-card">
+                    <h2 class="project-title">camplist</h2>
+                    <a href="https://towertime.herokuapp.com/">
+                      <img src="images/camplist.png" alt="towertime" />
+                    </a>
+                    <p class="project-description">
+                      this is camp list
+                    </p>
+                  </div>
+                </div>
                 <button id="projects-back">back</button>
               </div>
               <div id="resume">
                 <iframe frameborder="0">
-                 looks like this browser doesn't like iframe, here's a link: 
-                  <a href="https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/edit?usp=sharing">resume</a>
+                  looks like this browser doesn't like iframe, here's a link:
+                  <a
+                    SameSite="None"
+                    Secure
+                    href="https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/edit?usp=sharing"
+                    >resume</a
+                  >
                 </iframe>
                 <button id="resume-back">back</button>
               </div>

@@ -1,0 +1,44 @@
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: large;
+  }
+  #prof-pic {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1024px) {
+  h1 {
+    font-size: large;
+  }
+  #button-box {
+    flex-direction: row;
+  }
+  #flip-holder {
+    width: 85vw;
+  }
+  #prof-pic {
+    width: 80px;
+    height: 80px;
+  }
+  #resume > iframe {
+    height: 65vh;
+    width: 95vw;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 400px) {
+  #tech-name {
+    opacity: 0%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (orientation: landscape) {
+  #button-box {
+    flex-direction: row;
+  }
+  button {
+    height: 35px;
+  }
+}

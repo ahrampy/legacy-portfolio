@@ -16,6 +16,7 @@ body {
 }
 
 h1,
+h2,
 p,
 a {
   text-align: center;
@@ -33,7 +34,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2vh;
 }
 
 button {
@@ -67,6 +67,7 @@ button:focus {
   align-items: center;
   margin: 2%;
   perspective: 70px;
+  z-index: 1;
 }
 
 #border {
@@ -130,6 +131,35 @@ button:focus {
   transform: rotateZ(180deg);
 }
 
+#project-card-holder {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  flex-direction: row;
+}
+
+.project-card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: space-between;
+  box-sizing: border-box;
+  flex-direction: column;
+
+  width: 50%;
+  margin: 5%;
+  padding: 5%;
+  border-radius: 5px;
+  transition: background-color 0.5s ease;
+}
+
+.project-card:hover {
+  background: linear-gradient(#9198e5, transparent);
+}
+
+.project-card img {
+  width: 250px;
+}
+
 #resume {
   display: none;
   opacity: 0;
@@ -141,7 +171,7 @@ button:focus {
   width: 60vw;
   height: 80vh;
   margin: 0 20vw 0 20vw;
-  z-index: 1;
+  z-index: 2;
 }
 
 #contact {
@@ -213,50 +243,5 @@ button:focus {
   #resume > iframe {
     height: 70vh;
     width: 95vw;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  h1 {
-    font-size: large;
-  }
-  #prof-pic {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-@media only screen and (orientation: landscape) and (max-width: 1024px) {
-  h1 {
-    font-size: large;
-  }
-  #button-box {
-    flex-direction: row;
-  }
-  #flip-holder {
-    width: 85vw;
-  }
-  #prof-pic {
-    width: 80px;
-    height: 80px;
-  }
-  #resume > iframe {
-    height: 65vh;
-    width: 95vw;
-  }
-}
-
-@media only screen and (orientation: landscape) and (max-height: 400px) {
-  #tech-name {
-    opacity: 0%;
-  }
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 640px) and (orientation: landscape) {
-  #button-box {
-    flex-direction: row;
-  }
-  button {
-    height: 35px;
   }
 }
