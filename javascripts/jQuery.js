@@ -64,6 +64,12 @@ $(function () {
   //   speed: 500,
   //   zIndex: 3,
   // });
+  // $(".project-card").hover((e) => {
+  //   console.log($(e.currentTarget.children[0]));
+  // }, "");
+  $(".project-card").click((e) => {
+    $(e.currentTarget.children[0].click());
+  });
   $("#about-btn").click((e) => {
     e.preventDefault();
     $("#flip-card-front").css("opacity", "0%");
@@ -86,7 +92,7 @@ $(function () {
     e.preventDefault();
     $("#flip-card-front").css("opacity", "0%");
 
-    $("#projects").css("display", "inline-block");
+    $("#projects").css("display", "block");
     $("#projects").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(180deg)");
   });
