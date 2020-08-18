@@ -194,7 +194,7 @@ button:focus {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  margin: 0 0 25px;
+  margin: 0 0 2vh;
 }
 
 .project-title span {
