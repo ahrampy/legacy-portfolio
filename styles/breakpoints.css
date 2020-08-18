@@ -41,8 +41,8 @@
   }
 
   #projects {
-    position: absolute;
-    overflow-y: auto;
+    /* position: absolute; */
+    /* overflow-y: auto; */
   }
 
   #project-card-holder {

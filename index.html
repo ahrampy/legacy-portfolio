@@ -115,7 +115,7 @@
                 <button id="about-back">back</button>
               </div>
               <div id="projects">
-                <h1>projects</h1>
+                <!-- <h1>projects</h1> -->
                 <div id="project-card-holder">
                   <!-- <div id="project-slider"> -->
                   <div class="project-card">
@@ -223,10 +223,43 @@
                 <button id="resume-back">back</button>
               </div>
               <div id="contact">
-                <h1>contact</h1>
-                <p>
-                  ho hum
-                </p>
+                <!-- <h1>contact</h1> -->
+                <div id="contact-form">
+                  <form
+                    method="post"
+                    class="gform"
+                    action="https://script.google.com/macros/s/AKfycbwNzX16AJTNlNQ08iRuJOD2xAdA-FOAZHeleg7P9Q/exec"
+                  >
+                    <div class="fields">
+                      <div id="top-fields">
+                        <div class="field">
+                          <label for="name">name</label>
+                          <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field">
+                          <label for="email">email</label>
+                          <input type="text" name="email" id="email" />
+                        </div>
+                      </div>
+                      <div id="textbox" class="field">
+                        <label for="message">message</label>
+                        <textarea
+                          name="message"
+                          id="message"
+                          rows="5"
+                          style="resize: none;"
+                        ></textarea>
+                      </div>
+                      <input
+                        id="honeypot"
+                        type="hidden"
+                        name="honeypot"
+                        value=""
+                      />
+                    </div>
+                    <button>send</button>
+                  </form>
+                </div>
                 <button id="contact-back">back</button>
               </div>
             </div>
