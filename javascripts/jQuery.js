@@ -21,10 +21,10 @@ $(function () {
       );
     }
   });
-  // $("#resume > iframe").attr(
-  //   "src",
-  //   "http://docs.google.com/viewer?url=https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/export?format=pdf&embedded=true"
-  // );
+  $("#resume > iframe").attr(
+    "src",
+    "http://docs.google.com/viewer?url=https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/export?format=pdf&embedded=true"
+  );
   $("#resume > iframe").hover(
     () => {
       tracking = false;

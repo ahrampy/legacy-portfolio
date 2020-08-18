@@ -12,13 +12,7 @@
     width: 80px;
     height: 80px;
   }
-  #project-card-holder {
-    width: 100vw;
-    height: 80vh;
-  }
-  .project-img {
-    display: none;
-  }
+
   .project-description {
     font-size: small;
   }
@@ -53,11 +47,14 @@
 
   #project-card-holder {
     flex-direction: column;
-    height: fit-content;
   }
 
   .project-card {
     width: 80vw;
+  }
+
+    .project-img {
+    display: none;
   }
 
   #resume > iframe {
@@ -87,6 +84,9 @@
     font-size: 14px;
   }
   #project-card-holder {
-    height: auto;
+    width: 95vw;
+  }
+  .project-img {
+    display: none;
   }
 }
