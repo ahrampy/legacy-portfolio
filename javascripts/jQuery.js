@@ -55,18 +55,6 @@ $(function () {
       $("#tech-name").css("opacity", "0%");
     }
   );
-  // $("#project-slider").slick({
-  //   autoplay: true,
-  //   arrows: false,
-  //   accessibility: false,
-  //   autoplaySpeed: 1000,
-  //   slidesToShow: 3,
-  //   speed: 500,
-  //   zIndex: 3,
-  // });
-  // $(".project-card").hover((e) => {
-  //   console.log($(e.currentTarget.children[0]));
-  // }, "");
   $(".project-card").click((e) => {
     $(e.currentTarget.children[0].click());
   });
@@ -90,17 +78,29 @@ $(function () {
   });
   $("#projects-btn").click((e) => {
     e.preventDefault();
+    // $("#project-slider").css("display", "inline-block");
+    // $(".project-card").css("width", "50vw");
+    // $(".project-card").css("height", "50vh");
+    // $("#project-slider").slick({
+    //   vertical: false,
+    //   autoplay: true,
+    //   arrows: false,
+    //   accessibility: false,
+    //   autoplaySpeed: 1000,
+    //   slidesToShow: 1,
+    //   speed: 500,
+    //   zIndex: 3,
+    // });
     $("#flip-card-front").css("opacity", "0%");
-
     $("#projects").css("display", "block");
     $("#projects").css("opacity", "100%");
+    $("#techs").slick("slickPause");
     $("#flip-card").css("transform", "rotateX(180deg)");
   });
   $("#projects-back").click((e) => {
     e.preventDefault();
     $("#projects").css("opacity", "0%");
     $("#flip-card-front").css("opacity", "100%");
-
     setTimeout(() => {
       $("#projects").css("display", "none");
     }, 300);
@@ -112,7 +112,7 @@ $(function () {
     tracking = false;
     $("#border").css("transform", "none");
     $("#flip-card-front").css("opacity", "0%");
-
+    $("#techs").slick("slickPause");
     $("#resume").css("display", "inline-block");
     $("#resume").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(-180deg)");

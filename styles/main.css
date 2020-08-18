@@ -19,6 +19,8 @@ h1,
 h2,
 p,
 a {
+  margin: 0px;
+  padding: 0px;
   text-align: center;
 }
 
@@ -114,6 +116,10 @@ button:focus {
   transition: 0.3s;
 }
 
+#flip-card-front p, h1{
+  padding: 1%;
+}
+
 #flip-card-back {
   transform: rotateY(180deg);
 }
@@ -124,6 +130,10 @@ button:focus {
   transition: 0.3s;
 }
 
+#about p {
+  padding: 4%;
+}
+
 #projects {
   display: none;
   opacity: 0;
@@ -131,7 +141,7 @@ button:focus {
   transform: rotateZ(180deg);
 }
 
-#project-slider {
+#project-card-holder {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,10 +153,12 @@ button:focus {
   top: -20; */
   font-size: 15px;
   background-color: rgba(255, 255, 255, 0.1);
-  width: fit-content;
-  height: fit-content;
-  margin: 5%;
-  padding: 4% 8%;
+  padding: 2%;
+  margin: 2%;
+  width: 30vw;
+  height: auto;
+  overflow: scroll;
+  
   transition: 0.3s;
   /* border: 1px solid black; */
 }
@@ -168,8 +180,10 @@ button:focus {
 }
 
 .project-img {
+  width: 90%;
+  border-radius: 5px;
   filter: grayscale(100%);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .project-card:hover .project-img {
@@ -218,16 +232,9 @@ button:focus {
   opacity: 1;
 }
 
-.project-card img {
-  width: 200px;
-  height: 200px;
-  border-radius: 5px;
-  filter: grayscale(100%);
-}
-
 .project-techs {
   padding-top: 15px;
-  filter: invert(30%);
+  filter: invert(20%);
   transition: 0.3s;
 }
 

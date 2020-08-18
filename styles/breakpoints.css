@@ -12,13 +12,23 @@
     width: 80px;
     height: 80px;
   }
+  #project-card-holder {
+    width: 100vw;
+    height: 80vh;
+  }
+  .project-img {
+    display: none;
+  }
+  .project-description {
+    font-size: small;
+  }
   #resume > iframe {
     height: 65vh;
     width: 95vw;
   }
 }
 
-@media only screen and (orientation: portrait) and (max-width: 768px)  {
+@media only screen and (orientation: portrait) and (max-width: 768px) {
   body {
     font-size: medium;
   }
@@ -34,6 +44,16 @@
 
   #flip-holder {
     width: 75vw;
+  }
+
+  #project-card-holder {
+    flex-direction: column;
+    height: fit-content;
+    overflow-y: auto;
+  }
+
+  .project-card {
+    width: 80vw;
   }
 
   #resume > iframe {
@@ -52,11 +72,14 @@
   }
 }
 
-@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 667px)  {
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 667px) {
   button {
     height: 35px;
   }
-    #tech-name {
+  #tech-name {
     opacity: 0%;
+  }
+  #about p {
+    font-size: 14px;
   }
 }
