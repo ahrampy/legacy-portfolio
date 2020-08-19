@@ -49,10 +49,6 @@
 
   function handleFormSubmit(event) {
     event.preventDefault();
-<<<<<<< HEAD:assets/js/form-submission-handler.js
-=======
-
->>>>>>> scratch:javascripts/formHandler.js
     var form = event.target;
     var formData = getFormData(form);
     var data = formData.data;
@@ -82,24 +78,7 @@
     xhr.send(encoded);
   }
 
-<<<<<<< HEAD:assets/js/form-submission-handler.js
-  function loaded() {
-    var forms = document.querySelectorAll("form.gform");
-    for (var i = 0; i < forms.length; i++) {
-      forms[i].addEventListener("submit", handleFormSubmit, false);
-    }
-  }
-  document.addEventListener("DOMContentLoaded", loaded, false);
-
-  function disableAllButtons(form) {
-    var buttons = form.querySelectorAll("button");
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = true;
-    }
-  }
-=======
   $(document).ready(() => {
     $(".gform").on("submit", handleFormSubmit);
   });
->>>>>>> scratch:javascripts/formHandler.js
 })();
