@@ -1,0 +1,110 @@
+@media only screen and (orientation: landscape) and (max-width: 1024px) {
+  h1 {
+    font-size: large;
+  }
+  #button-box {
+    flex-direction: row;
+  }
+  #flip-holder {
+    width: 85vw;
+  }
+  #prof-pic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .project-description {
+    font-size: small;
+  }
+  #resume > iframe {
+    height: 65vh;
+    width: 95vw;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 768px) {
+  body {
+    font-size: medium;
+  }
+
+  #button-box {
+    flex-direction: column;
+  }
+
+  #prof-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  #flip-holder {
+    width: 75vw;
+  }
+
+  #project-card-holder {
+    flex-direction: column;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80vw;
+    height: 20vh;
+  }
+
+  .project-title {
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-techs > img {
+    width: 2vh;
+    height: 2vh;
+  }
+ 
+  .project-img {
+    display: none;
+  }
+
+  #resume > iframe {
+    height: 70vh;
+    width: 95vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: large;
+  }
+  #prof-pic {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 823px) {
+  button {
+    height: 35px;
+  }
+  #tech-name {
+    opacity: 0%;
+  }
+  #about p {
+    font-size: 14px;
+  }
+  #project-card-holder {
+    width: 95vw;
+  }
+  .project-img {
+    display: none;
+  }
+
+  .project-description {
+    font-size: 11px;
+  }
+
+  .project-techs img {
+    width: 2vw;
+    height: 2vw;
+  }
+}

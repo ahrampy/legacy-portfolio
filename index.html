@@ -1,495 +1,313 @@
 <!DOCTYPE html>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
   <head>
-    <title>Adrian Rampy</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-HLKZ1G0HGM"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel=icon href=images/ar.ico>
 
-      gtag("config", "G-HLKZ1G0HGM");
-    </script>
-    <link rel=icon href=/ar.ico>
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/breakpoints.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascripts/jQuery.js"></script>
     <link
       rel="stylesheet"
-      media="screen"
-      href="/assets/particles/particles.css"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
     />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
   </head>
-  <body class="is-preload">
-    <!-- Sidebar -->
-    <section id="sidebar">
-      <div class="inner">
-        <nav>
-          <ul>
-            <li><a href="#intro">Welcome</a></li>
-            <li><a href="#one">About Me</a></li>
-            <li><a href="#two">Projects</a></li>
-            <li><a href="#three">Languages</a></li>
-            <li><a href="#four">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </section>
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Intro -->
-      <section id="intro" class="wrapper style1 fullscreen fade-up canoe">
-        <div class="inner">
-          <h1>Hi, I'm Adrian</h1>
-          <p class="">a full-stack software developer</p>
-          <!-- <ul class="actions">
-								<li>
-									<li><a href="#four" class="button scrolly">Reach Out</a></li>
-								</li>
-							</ul> -->
-        </div>
-        <div class="intro-gradient"></div>
-      </section>
-
-      <!-- One -->
-      <section id="one" class="wrapper style1 fullscreen fade-up">
-        <div class="inner">
-          <div class="row gtr-0">
-            <h1>About Me</h1>
-            <span class="icon solid major pic"></span>
-          </div>
-          <p>
-            I have always had a passion for creation. I am interested in people
-            and what they do, and how to share these experiences with others,
-            beacuse I believe the more lives we come into contact with, the more
-            joy we can find in our own. As a software developer, I strive to
-            create opportunities to share experiences, to learn, and to build
-            new pathways towards personal and social growth. I love seeing
-            something I have built be enjoyed, or offer a new insight. I am
-            always striving to build better experiences through code, and hope
-            to never stop learning.
-          </p>
-          <ul class="actions">
-            <li>
-              <a
-                class="button"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="Adrian_Rampy_Resume.pdf"
-                >resume</a
-              >
-            </li>
-            <li><a href="#two" class="button scrolly">What I've Built</a></li>
-            <li><a href="#four" class="button scrolly">Get In Touch</a></li>
-          </ul>
-        </div>
-        <!-- <div id="particles-js"></div> -->
-      </section>
-
-      <!-- Two -->
-      <section id="two" class="wrapper style2 spotlights">
-        <section>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://towertime.herokuapp.com/"
-            class="image"
-            ><img
-              src="images/towertime.png"
-              alt=""
-              data-position="center center"
-          /></a>
-          <div class="content">
-            <div class="inner">
-              <h2>Tower Time</h2>
-              <p>
-                Canvas tower defense game. Build, upgrade, and sell towers to
-                create a maze for contenders to traverse through, and stop them
-                from reaching the red square.
-              </p>
-              <ul class="actions">
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/ahrampy/tower-time"
-                    class="button"
-                    >Git Repo</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://towertime.herokuapp.com/"
-                    class="button"
-                    >Live Link</a
-                  >
-                </li>
-              </ul>
+  <body>
+    <div id="border-container">
+      <div id="border">
+        <div id="flip-holder">
+          <div id="flip-card">
+            <div id="flip-card-front">
+              <img src="./images/prof.jpeg" id="prof-pic" alt="headshot" />
+              <h1>hi, i'm adrian</h1>
+              <p>i build, design, and play around on websites</p>
+              <div id="button-box">
+                <button id="about-btn">about</button>
+                <button id="projects-btn">projects</button>
+                <button id="resume-btn">resume</button>
+                <button id="contact-btn">contact</button>
+              </div>
+              <div id="techs">
+                <img
+                  src="./images/techs/html5.png"
+                  class="tech-img"
+                  alt="html5"
+                />
+                <img
+                  src="./images/techs/css3.png"
+                  class="tech-img"
+                  alt="css3"
+                />
+                <img
+                  src="./images/techs/javascript.png"
+                  class="tech-img"
+                  alt="javascript"
+                />
+                <img
+                  src="./images/techs/react.png"
+                  class="tech-img"
+                  alt="react"
+                />
+                <img
+                  src="./images/techs/redux.png"
+                  class="tech-img"
+                  alt="redux"
+                />
+                <img
+                  src="./images/techs/ruby.png"
+                  class="tech-img"
+                  alt="ruby"
+                />
+                <img
+                  src="./images/techs/rails.png"
+                  class="tech-img"
+                  alt="rails"
+                />
+                <img
+                  src="./images/techs/postgresql.png"
+                  class="tech-img"
+                  alt="postgresql"
+                />
+                <img
+                  src="./images/techs/mongodb.png"
+                  class="tech-img"
+                  alt="mongodb"
+                />
+                <img
+                  src="./images/techs/firebase.png"
+                  class="tech-img"
+                  alt="firebase"
+                />
+                <img
+                  src="./images/techs/webpack.png"
+                  class="tech-img"
+                  alt="webpack"
+                />
+              </div>
+              <div id="tech-name-box">
+                <span id="tech-name"></span>
+              </div>
             </div>
-          </div>
-        </section>
-        <section>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://flipcamp.herokuapp.com/"
-            class="image"
-            ><img src="images/flipcamp.png" alt="" data-position="center left"
-          /></a>
-          <div class="content">
-            <div class="inner">
-              <h2>Flipcamp</h2>
-              <p>
-                A site clone of Hipcamp.com, where users can sign up to view,
-                book, review, and get directions to campsites.
-              </p>
-              <ul class="actions">
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/ahrampy/Flipcamp"
-                    class="button"
-                    >Git Repo</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://flipcamp.herokuapp.com/"
-                    class="button"
-                    >Live Link</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-        <section>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://camplist-mern.herokuapp.com/"
-            class="image"
-            ><img
-              src="images/camplist.png"
-              alt=""
-              data-position="center center"
-          /></a>
-          <div class="content">
-            <div class="inner">
-              <h2>CampList</h2>
-              <p>
-                Search, discover, and create camping spots on Bureau of Land
-                Management property with filtered searches and fluid map
-                waypoints.
-              </p>
-              <ul class="actions">
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/ahrampy/CampList"
-                    class="button"
-                    >Git Repo</a
-                  >
-                </li>
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://camplist-mern.herokuapp.com/"
-                    class="button"
-                    >Live Link</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </section>
-
-      <!-- Three -->
-      <section id="three" class="wrapper style3 fade-up">
-        <div class="inner">
-          <h2>Languages and Technologies</h2>
-          <p>
-            I am always on the lookout for new tech to play with, but also enjoy
-            being comfortable in areas of expereince. Here's a list of tech that
-            I have worked with.
-          </p>
-          <div class="features">
-            <section>
-              <span class="icon solid major javascript"></span>
-              <h3>Javascript</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major react"></span>
-              <h3>React</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major redux"></span>
-              <h3>Redux</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major node"></span>
-              <h3>Node</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major express"></span>
-              <h3>Express</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major vue"></span>
-              <h3>Vue</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major ruby"></span>
-              <h3>Ruby</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major rails"></span>
-              <h3>Rails</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major postgresql"></span>
-              <h3>PostgreSQL</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major mongodb"></span>
-              <h3>MongoDB</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major firebase"></span>
-              <h3>Firebase</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major heroku"></span>
-              <h3>Heroku</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major git"></span>
-              <h3>Git</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major html5"></span>
-              <h3>HTML5</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major css3"></span>
-              <h3>CSS3</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major sass"></span>
-              <h3>Sass</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major webpack"></span>
-              <h3>Webpack</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major babel"></span>
-              <h3>Babel</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major jquery"></span>
-              <h3>jQuery</h3>
-              <p></p>
-            </section>
-            <section>
-              <span class="icon solid major google-maps"></span>
-              <h3>Maps</h3>
-              <p></p>
-            </section>
-          </div>
-          <ul class="actions">
-            <!-- <li><a href="generic.html" class="button">Learn more</a></li> -->
-          </ul>
-        </div>
-        <!-- <div id="particles-js"></div> -->
-      </section>
-
-      <!-- Four -->
-      <section id="four" class="wrapper style1 fade-up">
-        <div class="inner">
-          <h2>Get In Touch</h2>
-          <p>
-            Please reach out. I look forward to hearing from you!
-          </p>
-          <div class="split style1">
-            <section>
-              <form
-                method="post"
-                class="gform"
-                action="https://script.google.com/macros/s/AKfycbwNzX16AJTNlNQ08iRuJOD2xAdA-FOAZHeleg7P9Q/exec"
-              >
-                <div class="fields">
-                  <div class="field half">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" />
+            <div id="flip-card-back">
+              <div id="about">
+                <h1>a little about me</h1>
+                <p>
+                  i have always had a passion for creation. i am interested in
+                  people and what they do, and how to share those experiences
+                  with others, because i believe the more lives we come into
+                  contact with, the more joy we can find in our own. as a
+                  software developer, i strive to create opportunities to share
+                  experiences, to learn, and to build new pathways towards
+                  personal and social growth. i love seeing something i have
+                  built be enjoyed, offer a new insight, or help people spend
+                  more time on what they are passionate about. i am always
+                  striving to build better experiences through code, and hope to
+                  never stop learning.
+                </p>
+                <button id="about-back">back</button>
+              </div>
+              <div id="projects">
+                <!-- <h1>projects</h1> -->
+                <div id="project-card-holder">
+                  <!-- <div id="project-slider"> -->
+                  <div class="project-card">
+                    <a href="https://towertime.herokuapp.com/">
+                      <h2 class="project-title">
+                        <span>
+                          towertime
+                        </span>
+                      </h2>
+                      <img
+                        class="project-img"
+                        src="images/projects/towertime.png"
+                        alt="towertime"
+                      />
+                    </a>
+                    <div class="project-techs">
+                      <img src="images/techs/html5.png" alt="" />
+                      <img src="images/techs/css3.png" alt="" />
+                      <img src="images/techs/javascript.png" alt="" />
+                      <img src="images/techs/firebase.png" alt="" />
+                      <!-- <img src="images/techs/webpack.png" alt="">
+                        <img src="images/techs/babel.png" alt="">
+                        <img src="images/techs/howler.png" alt="">
+                        <img src="images/techs/github.png" alt=""> -->
+                    </div>
+                    <div class="project-description">
+                      <p>
+                        canvas tower defense game. build, upgrade, and sell
+                        towers to create a maze for enemy creeps, and stop them
+                        from reaching the red square.
+                      </p>
+                    </div>
                   </div>
-                  <div class="field half">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" />
+                  <div class="project-card">
+                    <a href="https://flipcamp.herokuapp.com/">
+                      <h2 class="project-title">
+                        <span>
+                          flipcamp
+                        </span>
+                      </h2>
+                      <img
+                        class="project-img"
+                        src="images/projects/flipcamp.png"
+                        alt="towertime"
+                      />
+                    </a>
+                    <div class="project-techs">
+                      <!-- <img src="images/techs/html5.png" alt="" />
+                        <img src="images/techs/css3.png" alt="" /> -->
+                      <img src="images/techs/react.png" alt="" />
+                      <img src="images/techs/redux.png" alt="" />
+                      <img src="images/techs/ruby.png" alt="" />
+                      <img src="images/techs/rails.png" alt="" />
+                      <img src="images/techs/postgresql.png" alt="" />
+                    </div>
+                    <div class="project-description">
+                      <p>
+                        a site clone of hipcamp, where users can sign up to
+                        view, book, review, and get directions to campsites.
+                      </p>
+                    </div>
                   </div>
-                  <div class="field">
-                    <label for="message">Message</label>
-                    <textarea
-                      name="message"
-                      id="message"
-                      rows="5"
-                      style="resize: none;"
-                    ></textarea>
+                  <div class="project-card">
+                    <a href="https://camplist-mern.herokuapp.com/">
+                      <h2 class="project-title">
+                        <span>
+                          camplist
+                        </span>
+                      </h2>
+                      <img
+                        class="project-img"
+                        src="images/projects/camplist.png"
+                        alt="towertime"
+                      />
+                    </a>
+                    <div class="project-techs">
+                      <!-- <img src="images/techs/html5.png" alt="" />
+                        <img src="images/techs/css3.png" alt="" /> -->
+                      <img src="images/techs/react.png" alt="" />
+                      <img src="images/techs/redux.png" alt="" />
+                      <img src="images/techs/express.png" alt="" />
+                      <img src="images/techs/node.png" alt="" />
+                      <img src="images/techs/mongodb.png" alt="" />
+                      <img src="images/techs/google-maps.png" alt="" />
+                    </div>
+                    <div class="project-description">
+                      <p>
+                        search, discover, and create camping spots on bureau of
+                        land management property with filtered searches and
+                        fluid map waypoints.
+                      </p>
+                    </div>
                   </div>
-                  <input id="honeypot" type="hidden" name="honeypot" value="" />
+                  <!-- </div> -->
                 </div>
-                <ul class="actions">
-                  <li><button class="button send">Send Message</button></li>
-                </ul>
-              </form>
-            </section>
-            <section>
-              <ul class="contact">
-                <li>
-                  <h3>Resume</h3>
+                <button id="projects-back">back</button>
+              </div>
+              <div id="resume">
+                <div id="resume-frame">
+                  <iframe
+                    frameborder="0"
+                    src="https://docs.google.com/document/d/e/2PACX-1vSaL5HahIPZJFrw_ToNkqaRjB2oKAUi7HuSdiNWjiT6cwtgIa9XwVCVD3UatUbQQ3hJgcJBT73toV1-/pub?embedded=true"
+                  >
+                  </iframe>
+                </div>
+                <button id="resume-back">back</button>
+              </div>
+              <div id="contact">
+                <!-- <h1>say hello</h1> -->
+                <div id="contact-form">
+                  <div class="thanks" style="display: none;">
+                    <h1>message sent</h1>
+                    <p>
+                      thank you for your message, i'll get back to you as soon
+                      as i can
+                    </p>
+                  </div>
+                  <form
+                    method="post"
+                    class="gform"
+                    action="https://script.google.com/macros/s/AKfycbwNzX16AJTNlNQ08iRuJOD2xAdA-FOAZHeleg7P9Q/exec"
+                  >
+                    <div class="fields">
+                      <div id="top-fields">
+                        <div class="field">
+                          <label for="name">name</label>
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            required="required"
+                          />
+                        </div>
+                        <div class="field">
+                          <label for="email">email</label>
+                          <input
+                            type="text"
+                            name="email"
+                            id="email"
+                            required="required"
+                          />
+                        </div>
+                      </div>
+                      <div id="textbox" class="field">
+                        <label for="message">message</label>
+                        <textarea
+                          name="message"
+                          id="message"
+                          required="required"
+                        ></textarea>
+                      </div>
+                      <input
+                        id="honeypot"
+                        type="hidden"
+                        name="honeypot"
+                        value=""
+                      />
+                    </div>
+                    <button class="send" type="submit">send</button>
+                  </form>
+                </div>
+                <div id="contact-links">
                   <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="Adrian_Rampy_Resume.pdf"
-                    >View</a
-                  >
-                  /
-                  <a
-                    href="Adrian_Rampy_Resume.pdf"
-                    download="Adrian_Rampy_Resume"
-                    >Download</a
-                  >
-                </li>
-                <li>
-                  <h3>Location</h3>
-                  <span>
-                    San Fransisco, CA<br />
-                    United States</span
-                  >
-                </li>
-                <li>
-                  <h3>Email</h3>
-                  <a href="mailto:ahrampy@gmail.com">ahrampy@gmail.com</a>
-                </li>
-                <!-- <li>
-											<h3>Phone</h3>
-											<span>(530) 559-0408</span>
-										</li> -->
-                <li>
-                  <h3>Social</h3>
-                  <ul class="icons">
-                    <li>
-                      <a
-                        href="https://github.com/ahrampy"
-                        class="icon brands fa-github"
-                        ><span class="label">GitHub</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/in/adrian-rampy-1b8924198/"
-                        class="icon brands fa-linkedin-in"
-                        ><span class="label">LinkedIn</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://angel.co/adrian-rampy"
-                        class="icon brands fab fa-angellist"
-                        ><span class="label">Angel</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.instagram.com/ahrmpy/"
-                        class="icon brands fa-instagram"
-                        ><span class="label">Instagram</span></a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.facebook.com/ahrampy"
-                        class="icon brands fa-facebook-f"
-                        ><span class="label">Facebook</span></a
-                      >
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </section>
+                    rel="stylesheet"
+                    href="https://www.linkedin.com/in/adrian-rampy-1b8924198/"
+                    ><img src="images/social/linkedin.png" alt="linkedin"
+                  /></a>
+                  <a rel="stylesheet" href="https://www.facebook.com/ahrampy/"
+                    ><img src="images/social/facebook.png" alt="facebook"
+                  /></a>
+                  <a rel="stylesheet" href="https://www.instagram.com/ahrmpy/"
+                    ><img src="images/social/instagram.png" alt="instagram"
+                  /></a>
+                  <a rel="stylesheet" href="https://github.com/ahrampy"
+                    ><img src="images/social/github.png" alt="github"
+                  /></a>
+                </div>
+                <button id="contact-back">back</button>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="wrapper style1-alt">
-      <div class="inner">
-        <ul class="menu">
-          <li>&copy; 2020 Adrian Rampy. All rights reserved.</li>
-          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-          <!-- <li>Animation: <a href="https://github.com/VincentGarreau/particles.js/">particles.js</a></li> -->
-        </ul>
       </div>
-    </footer>
-
-    <!-- Scripts -->
+    </div>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
+    ></script>
     <script
       data-cfasync="false"
       type="text/javascript"
-      src="assets/js/form-submission-handler.js"
+      src="javascripts/formHandler.js"
     ></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <!-- <script src="assets/particles/particles.js"></script>
-		<script src="assets/particles/config.js"></script> -->
   </body>
 </html>

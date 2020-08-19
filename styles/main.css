@@ -1,0 +1,404 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: 0.2s;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+h1,
+h2,
+p,
+a {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+button,
+div,
+span,
+a {
+  outline: none;
+  box-shadow: none;
+}
+
+#button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh;
+}
+
+button {
+  font-family: inherit;
+  font-size: large;
+  background: none;
+  color: white;
+  width: 100px;
+  height: 50px;
+  margin: 1vw;
+  border: 1px solid white;
+  transition: 0.35s;
+  z-index: 3;
+}
+
+button:hover,
+button:focus {
+  color: black;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 2em white;
+}
+
+#border-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  perspective: 70px;
+  z-index: 1;
+}
+
+#border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f48e62, #9198e5);
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+#flip-holder {
+  width: 50vw;
+  height: 50vw;
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+#flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+#flip-card-front,
+#flip-card-back {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#flip-card-front {
+  transition: 0.3s;
+}
+
+#flip-card-front p,
+h1 {
+  padding: 1%;
+}
+
+#flip-card-back {
+  transform: rotateY(180deg);
+}
+
+#about {
+  display: none;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#about p {
+  padding: 4%;
+}
+
+#projects {
+  display: none;
+  opacity: 0;
+  transition: 0.3s;
+  transform: rotateZ(180deg);
+}
+
+#project-card-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.project-card {
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2vh;
+  margin: 2vw;
+  width: 20vw;
+  height: 60vh;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+.project-card:hover .project-techs {
+  filter: invert(0%);
+}
+
+.project-card a {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-img {
+  width: 80%;
+  border-radius: 5px;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.project-card:hover .project-img {
+  filter: grayscale(0%);
+}
+
+.project-title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-top: 2vh;
+  margin: 0 0 20px;
+}
+
+.project-title span {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.project-title span:before,
+.project-title span:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 0px;
+  height: 1px;
+  margin: 2px 0 0;
+  transition: 0.3s;
+  opacity: 0;
+  background-color: black;
+}
+
+.project-title span:before {
+  left: 50%;
+}
+
+.project-title span:after {
+  right: 50%;
+}
+
+.project-card:hover .project-title span:before,
+.project-card:hover .project-title span:after {
+  width: 50%;
+  opacity: 1;
+}
+
+.project-techs {
+  padding-top: 0.5vh;
+  filter: invert(20%);
+  transition: 0.3s;
+}
+
+.project-techs img {
+  width: 25px;
+  height: 25px;
+}
+
+.project-description {
+  padding: 2vh;
+  /* height: 100px; */
+  /* width: 200px; */
+}
+
+.project-description p {
+  align-items: center;
+}
+
+#resume {
+  display: none;
+  opacity: 0;
+  transition: 0.3s;
+  transform: rotateZ(180deg);
+}
+
+#resume-frame {
+  position: relative;
+  overflow: hidden;
+  width: 60vw;
+  height: 80vh;
+  z-index: 1;
+}
+
+#resume-frame > iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#resume > button {
+  position: relative;
+  z-index: 2;
+}
+
+#contact {
+  display: none;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#top-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+#top-fields .fields {
+  width: 4%;
+}
+
+#contact textarea {
+  resize: none;
+  width: 90%;
+  height: 15vh;
+}
+
+#contact label {
+  width: 20%;
+}
+
+#contact input {
+  width: 80%;
+}
+
+#contact input,
+textarea {
+  font-family: inherit;
+  background-color: white;
+  padding: 1vh;
+  margin: 1vh;
+  border: 1px solid white;
+}
+
+textarea:focus,
+input[type="text"]:focus {
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  box-shadow: 0 0 0 1px black;
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: 1px solid black;
+  -webkit-text-fill-color: black;
+  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.thanks h1,
+p {
+  padding-bottom: 3vh;
+}
+
+#contact-links {
+  padding: 1vh 0;
+}
+
+#contact-links img {
+  width: 6vh;
+  margin: 1vh 1vw;
+  transition: 0.3s;
+}
+
+#contact-links a:hover img {
+  filter: invert(100%);
+}
+
+#prof-pic {
+  width: 130px;
+  height: 130px;
+  padding: 1vw;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+#prof-pic:hover {
+  filter: grayscale(0%);
+}
+
+#techs {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  user-select: none;
+  transition: 0.25s;
+}
+
+.tech-img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 10%;
+  transition: 0.25s;
+}
+
+#techs:hover .tech-img {
+  filter: invert(100%);
+}
+
+#tech-name-box {
+  text-align: center;
+  width: 100px;
+  height: 25px;
+}
+
+#tech-name {
+  opacity: 0%;
+  padding: 10px;
+  transition: 0.25s;
+}
