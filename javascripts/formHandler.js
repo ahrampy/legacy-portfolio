@@ -57,10 +57,7 @@
       return false;
     }
 
-    var submit = form.querySelector(".send");
-    submit.innerHTML = "sending...";
-    submit.disabled = true;
-    submit;
+    $(".send").html("sending...");
 
     var url = form.action;
     var xhr = new XMLHttpRequest();
@@ -69,11 +66,9 @@
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         form.reset();
-        submit.style.display = "none";
-        var formElements = form.querySelector(".fields");
-        formElements.style.display = "none";
-        var thankYouMessage = document.querySelector(".thanks");
-        thankYouMessage.style.display = "block";
+        $(".send").css("display", "none");
+        $(".fields").css("display", "none");
+        $(".thanks").css("display", "block");
       }
     };
     var encoded = Object.keys(data)
@@ -84,18 +79,7 @@
     xhr.send(encoded);
   }
 
-  function loaded() {
-    var forms = document.querySelectorAll("form.gform");
-    for (var i = 0; i < forms.length; i++) {
-      forms[i].addEventListener("submit", handleFormSubmit, false);
-    }
-  }
-  document.addEventListener("DOMContentLoaded", loaded, false);
-
-  // function disableAllButtons(form) {
-  //   var buttons = form.querySelectorAll("button");
-  //   for (var i = 0; i < buttons.length; i++) {
-  //     buttons[i].disabled = true;
-  //   }
-  // }
+  $(document).ready(() => {
+    $(".gform").on("submit", handleFormSubmit);
+  });
 })();

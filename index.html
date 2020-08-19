@@ -194,8 +194,8 @@
                     <div class="project-techs">
                       <!-- <img src="images/icons/html5.png" alt="" />
                         <img src="images/icons/css3.png" alt="" /> -->
-                      <!-- <img src="images/icons/react.png" alt="" />
-                        <img src="images/icons/redux.png" alt="" /> -->
+                      <img src="images/icons/react.png" alt="" />
+                      <img src="images/icons/redux.png" alt="" />
                       <img src="images/icons/express.png" alt="" />
                       <img src="images/icons/node.png" alt="" />
                       <img src="images/icons/mongodb.png" alt="" />
@@ -214,17 +214,11 @@
                 <button id="projects-back">back</button>
               </div>
               <div id="resume">
-                <!-- <iframe id="gdoc-resume" frameborder="0">
-                  looks like this browser doesn't like iframe, here's a link:
-                  <a
-                    href="https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/edit?usp=sharing"
-                    >resume</a
-                  >
-                </iframe> -->
                 <iframe
                   frameborder="0"
                   src="https://docs.google.com/document/d/e/2PACX-1vSaL5HahIPZJFrw_ToNkqaRjB2oKAUi7HuSdiNWjiT6cwtgIa9XwVCVD3UatUbQQ3hJgcJBT73toV1-/pub?embedded=true"
-                ></iframe>
+                >
+                </iframe>
                 <button id="resume-back">back</button>
               </div>
               <div id="contact">
@@ -245,16 +239,16 @@
                     <div class="fields">
                       <div id="top-fields">
                         <div class="field">
-                          <label for="name">name</label>
+                          <label for="name" required="required">name</label>
                           <input type="text" name="name" id="name" />
                         </div>
                         <div class="field">
-                          <label for="email">email</label>
+                          <label for="email" required="required">email</label>
                           <input type="text" name="email" id="email" />
                         </div>
                       </div>
                       <div id="textbox" class="field">
-                        <label for="message">message</label>
+                        <label for="message" required="required">message</label>
                         <textarea
                           name="message"
                           id="message"
@@ -269,7 +263,7 @@
                         value=""
                       />
                     </div>
-                    <button class="send">send</button>
+                    <button class="send" type="submit">send</button>
                   </form>
                 </div>
                 <button id="contact-back">back</button>
