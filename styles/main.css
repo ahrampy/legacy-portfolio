@@ -151,10 +151,6 @@ h1 {
 }
 
 .project-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  overflow: scroll;
   font-size: 15px;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 2vh;
@@ -195,6 +191,7 @@ h1 {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  padding-top: 2vh;
   margin: 0 0 20px;
 }
 
@@ -283,14 +280,10 @@ textarea {
   width: 80%;
 }
 
-#textbox {
-  /* display: flex; */
-  /* justify-content: center; */
-}
-
 #contact input,
 textarea {
-  background-color: inherit;
+  font-family: inherit;
+  background-color: white;
   padding: 1vh;
   margin: 1vh;
   border: 1px solid white;
@@ -301,6 +294,23 @@ input[type="text"]:focus {
   /* background-color: rgba(255, 255, 255, 0.2); */
   box-shadow: 0 0 0 1px black;
   outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: 1px solid black;
+  -webkit-text-fill-color: black;
+  box-shadow: 0 0 0px 1000px white inset;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.thanks h1, p {
+  padding-bottom: 3vh;
 }
 
 #prof-pic {

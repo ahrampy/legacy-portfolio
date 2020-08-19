@@ -49,6 +49,7 @@
 
   function handleFormSubmit(event) {
     event.preventDefault();
+
     var form = event.target;
     var formData = getFormData(form);
     var data = formData.data;
@@ -56,7 +57,11 @@
       return false;
     }
 
-    disableAllButtons(form);
+    var submit = form.querySelector(".send");
+    submit.innerHTML = "sending...";
+    submit.disabled = true;
+    submit;
+
     var url = form.action;
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
@@ -64,16 +69,11 @@
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         form.reset();
-        const submit = form.querySelector(".send");
-        submit.innerHTML = "Message Sent!";
-        // var formElements = form.querySelector(".form-elements");
-        // if (formElements) {
-        //   formElements.style.display = "none"; // hide form
-        // }
-        // var thankYouMessage = form.querySelector(".thankyou_message");
-        // if (thankYouMessage) {
-        //   thankYouMessage.style.display = "block";
-        // }
+        submit.style.display = "none";
+        var formElements = form.querySelector(".fields");
+        formElements.style.display = "none";
+        var thankYouMessage = document.querySelector(".thanks");
+        thankYouMessage.style.display = "block";
       }
     };
     var encoded = Object.keys(data)
@@ -92,10 +92,10 @@
   }
   document.addEventListener("DOMContentLoaded", loaded, false);
 
-  function disableAllButtons(form) {
-    var buttons = form.querySelectorAll("button");
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = true;
-    }
-  }
+  // function disableAllButtons(form) {
+  //   var buttons = form.querySelectorAll("button");
+  //   for (var i = 0; i < buttons.length; i++) {
+  //     buttons[i].disabled = true;
+  //   }
+  // }
 })();

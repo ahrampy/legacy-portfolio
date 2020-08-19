@@ -21,10 +21,6 @@ $(function () {
       );
     }
   });
-  $("#resume > iframe").attr(
-    "src",
-    "http://docs.google.com/viewer?url=https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/export?format=pdf&embedded=true"
-  );
   $("#resume > iframe").hover(
     () => {
       tracking = false;
@@ -78,19 +74,6 @@ $(function () {
   });
   $("#projects-btn").click((e) => {
     e.preventDefault();
-    // $("#project-slider").css("display", "inline-block");
-    // $(".project-card").css("width", "50vw");
-    // $(".project-card").css("height", "50vh");
-    // $("#project-slider").slick({
-    //   vertical: false,
-    //   autoplay: true,
-    //   arrows: false,
-    //   accessibility: false,
-    //   autoplaySpeed: 1000,
-    //   slidesToShow: 1,
-    //   speed: 500,
-    //   zIndex: 3,
-    // });
     $("#flip-card-front").css("opacity", "0%");
     $("#projects").css("display", "block");
     $("#projects").css("opacity", "100%");
@@ -147,5 +130,11 @@ $(function () {
     }, 300);
     $("#flip-card").css("transform", "rotateY(0deg)");
     $("#techs").slick("slickPlay");
+  });
+  $(document).ready(() => {
+    $("#gdoc-resume").attr(
+      "src",
+      "http://docs.google.com/viewer?url=https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/export?format=pdf&embedded=true"
+    );
   });
 });

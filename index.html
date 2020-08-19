@@ -213,7 +213,7 @@
                 <button id="projects-back">back</button>
               </div>
               <div id="resume">
-                <iframe frameborder="0">
+                <iframe id="gdoc-resume" frameborder="0">
                   looks like this browser doesn't like iframe, here's a link:
                   <a
                     href="https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/edit?usp=sharing"
@@ -225,6 +225,13 @@
               <div id="contact">
                 <!-- <h1>contact</h1> -->
                 <div id="contact-form">
+                  <div class="thanks" style="display: none;">
+                    <h1>message sent</h1>
+                    <p>
+                      thank you for your message, i'll get back to you as soon
+                      as i can
+                    </p>
+                  </div>
                   <form
                     method="post"
                     class="gform"
@@ -257,7 +264,7 @@
                         value=""
                       />
                     </div>
-                    <button>send</button>
+                    <button class="send">send</button>
                   </form>
                 </div>
                 <button id="contact-back">back</button>
