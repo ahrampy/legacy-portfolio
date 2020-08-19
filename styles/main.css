@@ -49,7 +49,7 @@ button {
   margin: 1vw;
   border: 1px solid white;
   transition: 0.35s;
-  z-index: 2;
+  z-index: 3;
 }
 
 button:hover,
@@ -177,7 +177,7 @@ h1 {
 }
 
 .project-img {
-  width: 90%;
+  width: 80%;
   border-radius: 5px;
   filter: grayscale(100%);
   transition: 0.3s;
@@ -258,11 +258,22 @@ h1 {
   transform: rotateZ(180deg);
 }
 
-#resume > iframe {
+#resume-frame {
+  position: relative;
+  overflow: hidden;
   width: 60vw;
   height: 80vh;
-  margin: 0 20vw 0 20vw;
+}
+
+#resume-frame > iframe {
+  width: 100%;
+  height: 100%;
   z-index: 1;
+}
+
+#resume > button {
+  position: relative;
+  z-index: 2;
 }
 
 #contact {
@@ -335,7 +346,7 @@ p {
 #contact-links img {
   width: 6vh;
   margin: 1vh 1vw;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 #contact-links a:hover img {

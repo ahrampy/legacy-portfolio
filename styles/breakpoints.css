@@ -98,4 +98,13 @@
   .project-img {
     display: none;
   }
+
+  .project-description {
+    font-size: 11px;
+  }
+
+  .project-techs img {
+    width: 2vw;
+    height: 2vw;
+  }
 }
