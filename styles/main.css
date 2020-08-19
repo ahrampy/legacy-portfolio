@@ -271,12 +271,26 @@ h1 {
   transition: 0.3s;
 }
 
+#top-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+#top-fields .fields {
+  width: 4%;
+}
+
+#contact textarea {
+  resize: none;
+  width: 90%;
+  height: 15vh;
+}
+
 #contact label {
   width: 20%;
 }
 
-#contact input,
-textarea {
+#contact input {
   width: 80%;
 }
 
@@ -309,8 +323,23 @@ textarea:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.thanks h1, p {
+.thanks h1,
+p {
   padding-bottom: 3vh;
+}
+
+#contact-links {
+  padding: 1vh 0;
+}
+
+#contact-links img {
+  width: 6vh;
+  margin: 1vh 1vw;
+  transition: .3s;
+}
+
+#contact-links a:hover img {
+  filter: invert(100%);
 }
 
 #prof-pic {
