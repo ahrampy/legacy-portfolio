@@ -156,7 +156,7 @@ h1 {
   padding: 2vh;
   margin: 2vw;
   width: 20vw;
-  height: 55vh;
+  height: 60vh;
   transition: 0.3s;
 }
 
@@ -242,7 +242,7 @@ h1 {
 }
 
 .project-description {
-  padding: 1vh;
+  padding: 2vh;
   /* height: 100px; */
   /* width: 200px; */
 }
