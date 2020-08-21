@@ -1,20 +1,25 @@
 $(function () {
-  var $centerX, $centerY;
+  var centerX, centerY;
   var tracking = true;
+  var mobile = false;
   $(window).on("load resize", () => {
-    $centerX = $("#border-container").width() / 2;
-    $centerY = $("#border-container").height() / 2;
+    mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
+    if (mobile) {
+      $("#border").css("transform", "none");
+    }
+    centerX = $("#border-container").width() / 2;
+    centerY = $("#border-container").height() / 2;
   });
   $("#border-container").mousemove((e) => {
-    if (tracking) {
+    if (tracking && !mobile) {
       $("#border").css(
         "transform",
         `rotateX(${(
-          ((e.pageY - $centerY) * -1) /
+          ((e.pageY - centerY) * -1) /
           $("#border").outerHeight() /
           2
         ).toFixed(2)}deg) rotateY(${(
-          (e.pageX - $centerX) /
+          (e.pageX - centerX) /
           $("#border").outerWidth() /
           2
         ).toFixed(2)}deg)`
