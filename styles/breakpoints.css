@@ -22,6 +22,38 @@
   }
 }
 
+@media only screen and (orientation: landscape) and (max-device-width: 823px) {
+  button {
+    height: 35px;
+  }
+  #tech-name {
+    opacity: 0%;
+  }
+  #about p {
+    font-size: 14px;
+  }
+  #project-card-holder {
+    width: 95vw;
+  }
+  .project-img {
+    display: none;
+  }
+
+  .project-description {
+    font-size: 11px;
+  }
+
+  .project-techs img {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  #resume > iframe {
+    height: 50vh;
+    width: 95vw;
+  }
+}
+
 @media only screen and (orientation: portrait) and (max-width: 768px) {
   body {
     font-size: medium;
@@ -33,7 +65,7 @@
   }
 
   button {
-    height: ;
+    height: 35px;
   }
 
   #prof-pic {
@@ -84,37 +116,5 @@
   #prof-pic {
     width: 80px;
     height: 80px;
-  }
-}
-
-@media only screen and (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 823px) {
-  button {
-    height: 35px;
-  }
-  #tech-name {
-    opacity: 0%;
-  }
-  #about p {
-    font-size: 14px;
-  }
-  #project-card-holder {
-    width: 95vw;
-  }
-  .project-img {
-    display: none;
-  }
-
-  .project-description {
-    font-size: 11px;
-  }
-
-  .project-techs img {
-    width: 2vw;
-    height: 2vw;
-  }
-
-  #resume > iframe {
-    height: 50vh;
-    width: 95vw;
   }
 }
