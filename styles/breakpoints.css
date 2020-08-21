@@ -111,4 +111,9 @@
     width: 2vw;
     height: 2vw;
   }
+
+  #resume > iframe {
+    height: 50vh;
+    width: 95vw;
+  }
 }
