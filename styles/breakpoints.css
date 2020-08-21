@@ -26,6 +26,10 @@
   button {
     height: 35px;
   }
+  #flip-card-window {
+    width: 80vw;
+    height: 80vh;
+  }
   #tech-name {
     opacity: 0%;
   }
@@ -59,13 +63,14 @@
     font-size: medium;
   }
 
+  #flip-card-window {
+    width: 80vw;
+    height: 60vh;
+  }
+
   #button-box {
     flex-direction: column;
     min-height: 30vh;
-  }
-
-  button {
-    height: 35px;
   }
 
   #prof-pic {

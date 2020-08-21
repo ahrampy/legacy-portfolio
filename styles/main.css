@@ -113,6 +113,15 @@ button:focus {
   backface-visibility: hidden;
 }
 
+#flip-card-window {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 40vw;
+  height: 60vh;
+  border-radius: 5px;
+  transform: translateZ(-20px);
+}
+
 #flip-card-front {
   transition: 0.3s;
 }
@@ -128,6 +137,8 @@ h1 {
 
 #about {
   display: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2vw;
   opacity: 0;
   transition: 0.3s;
 }
@@ -278,6 +289,9 @@ h1 {
 
 #contact {
   display: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2vw;
+  border-radius: 5px;
   opacity: 0;
   transition: 0.3s;
 }
