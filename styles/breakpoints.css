@@ -5,7 +5,7 @@
   #button-box {
     flex-direction: row;
   }
-  #flip-holder {
+  #flip-container {
     width: 85vw;
   }
   #prof-pic {
@@ -36,7 +36,7 @@
   #about p {
     font-size: 14px;
   }
-  #project-card-holder {
+  #project-card-container {
     width: 95vw;
   }
   .project-img {
@@ -78,11 +78,11 @@
     height: 100px;
   }
 
-  #flip-holder {
+  #flip-container {
     width: 75vw;
   }
 
-  #project-card-holder {
+  #project-card-container {
     flex-direction: column;
   }
 

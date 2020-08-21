@@ -84,7 +84,7 @@ button:focus {
   transition: 0.2s;
 }
 
-#flip-holder {
+#flip-container {
   width: 50vw;
   height: 50vw;
   background-color: transparent;
@@ -155,7 +155,7 @@ h1 {
   transform: rotateZ(180deg);
 }
 
-#project-card-holder {
+#project-card-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -372,7 +372,7 @@ p {
 #prof-pic {
   width: 130px;
   height: 130px;
-  padding: 1vw;
+  margin: 1vw;
   border-radius: 50%;
   filter: grayscale(100%);
   transition: 0.3s;
