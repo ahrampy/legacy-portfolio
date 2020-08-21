@@ -31,6 +31,10 @@
     flex-direction: column;
   }
 
+  button {
+    height: 35px;
+  }
+
   #prof-pic {
     width: 100px;
     height: 100px;
@@ -61,7 +65,7 @@
     width: 2vh;
     height: 2vh;
   }
- 
+
   .project-img {
     display: none;
   }
