@@ -21,7 +21,7 @@ $(function () {
       );
     }
   });
-  $("#resume > iframe").hover(
+  $("#resume-frame").hover(
     () => {
       tracking = false;
       $("#border").css("transform", "none");
