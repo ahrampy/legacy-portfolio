@@ -31,9 +31,9 @@
     flex-direction: column;
   }
 
-  button {
+  /* button {
     height: 35px;
-  }
+  } */
 
   #prof-pic {
     width: 100px;
@@ -112,7 +112,7 @@
     height: 2vw;
   }
 
-  #resume > iframe {
+    #resume > iframe {
     height: 50vh;
     width: 95vw;
   }
