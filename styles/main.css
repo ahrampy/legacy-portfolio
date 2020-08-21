@@ -322,7 +322,7 @@ h1 {
 #contact input,
 textarea {
   font-family: inherit;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.2);;
   padding: 1vh;
   margin: 1vh;
   border: 1px solid white;
@@ -330,7 +330,7 @@ textarea {
 
 textarea:focus,
 input[type="text"]:focus {
-  /* background-color: rgba(255, 255, 255, 0.2); */
+  background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 0 1px black;
   outline: none;
 }
@@ -343,8 +343,8 @@ textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
   border: 1px solid black;
   -webkit-text-fill-color: black;
-  box-shadow: 0 0 0px 1000px white inset;
-  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.2) inset;
+  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.2) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
