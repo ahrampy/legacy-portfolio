@@ -99,6 +99,15 @@
     padding: 0;
   }
 
+  #techs {
+    width: 60px;
+    height: 60px;
+  }
+
+    #tech-name {
+    padding-top: 1%;
+  }
+
   .project-techs > img {
     width: 2vh;
     height: 2vh;
