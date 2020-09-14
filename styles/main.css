@@ -148,6 +148,15 @@ h1 {
   padding: 4%;
 }
 
+#about-contact {
+  color: rgb(89, 89, 89);
+  border: none;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
 #projects {
   display: none;
   opacity: 0;
@@ -256,8 +265,6 @@ h1 {
 
 .project-description {
   padding: 2vh;
-  /* height: 100px; */
-  /* width: 200px; */
 }
 
 .project-description p {

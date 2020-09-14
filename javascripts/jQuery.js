@@ -84,6 +84,19 @@ $(function () {
     $("#flip-card").css("transform", "rotateY(0deg)");
     showFront();
   });
+  $("#about-contact").click((e) => {
+    e.preventDefault();
+    $("#about").css("opacity", "0%");
+    setTimeout(() => {
+      $("#about").css("display", "none");
+    }, 300);
+    $("#flip-card").css("transform", "rotateY(0deg)");
+    setTimeout(() => {
+      $("#contact").css("display", "inline-block");
+      $("#contact").css("opacity", "100%");
+      $("#flip-card").css("transform", "rotateY(-180deg)");
+    }, 300);
+  });
   $("#projects-btn").click((e) => {
     e.preventDefault();
     hideFront();
