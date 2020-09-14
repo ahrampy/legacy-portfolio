@@ -16,7 +16,7 @@
   .project-description {
     font-size: small;
   }
-  #resume > iframe {
+  #resume-frame {
     height: 65vh;
     width: 95vw;
   }
@@ -33,8 +33,9 @@
   #tech-name {
     opacity: 0%;
   }
-  #about p {
-    font-size: 14px;
+  p,
+  #about-contact {
+    font-size: small;
   }
   #project-card-container {
     width: 95vw;
@@ -52,8 +53,8 @@
     height: 2vw;
   }
 
-  #resume > iframe {
-    height: 50vh;
+  #resume-frame {
+    height: 60vh;
     width: 95vw;
   }
 }
@@ -63,6 +64,10 @@
     font-size: medium;
   }
 
+  button {
+    height: 35px;
+  }
+
   #flip-card-window {
     width: 80vw;
     height: 60vh;
@@ -70,7 +75,6 @@
 
   #button-box {
     flex-direction: column;
-    min-height: 30vh;
   }
 
   #prof-pic {
@@ -111,7 +115,7 @@
     display: none;
   }
 
-  #resume > iframe {
+  #resume-frame {
     height: 70vh;
     width: 95vw;
   }
@@ -120,6 +124,10 @@
 @media only screen and (max-width: 400px) {
   h1 {
     font-size: large;
+  }
+  p,
+  #about-contact {
+    font-size: small;
   }
   #prof-pic {
     width: 80px;
