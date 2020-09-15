@@ -7,9 +7,16 @@ $(function () {
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
-      $(":root").css("--primary", "black");
-      $(":root").css("--seconary", "white");
+      setDark();
     }
+  };
+  var setDark = function () {
+    $(":root").css("--primary", "black");
+    $(":root").css("--secondary", "white");
+  };
+  var setLight = function () {
+    $(":root").css("--primary", "white");
+    $(":root").css("--secondary", "black");
   };
   var fadeIn = function () {
     $("#fade-in").animate({ height: "0%" }, { duration: 350, queue: false });
@@ -25,6 +32,11 @@ $(function () {
     $("#flip-card-front").css("opacity", "100%");
     $("#techs").slick("slickPlay");
   };
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      e.matches ? setDark() : setLight();
+    });
   $(window).on("load resize", () => {
     checkDarkMode();
     fadeIn();
