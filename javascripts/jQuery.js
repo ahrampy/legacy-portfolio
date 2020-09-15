@@ -3,7 +3,7 @@ $(function () {
   var tracking = true;
   var mobile = false;
   var fadeIn = function () {
-    $("#fade-in").animate({ height: "0%" }, { duration: 2000, queue: false });
+    $("#fade-in").animate({ height: "0%" }, { duration: 700, queue: false });
   };
   var resetBorder = function () {
     $("#border").css("transform", "none");
