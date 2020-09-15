@@ -2,6 +2,15 @@ $(function () {
   var centerX, centerY;
   var tracking = true;
   var mobile = false;
+  var checkDarkMode = function () {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      $(":root").css("--primary", "black");
+      $(":root").css("--seconary", "white");
+    }
+  };
   var fadeIn = function () {
     $("#fade-in").animate({ height: "0%" }, { duration: 350, queue: false });
   };
@@ -17,6 +26,7 @@ $(function () {
     $("#techs").slick("slickPlay");
   };
   $(window).on("load resize", () => {
+    checkDarkMode();
     fadeIn();
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     if (mobile) return resetBorder();
