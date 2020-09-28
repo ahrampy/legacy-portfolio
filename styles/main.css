@@ -68,7 +68,7 @@ button {
   height: 50px;
   margin: 1vw;
   border: 1px solid var(--primary);
-  transition: 0.35s;
+  transition: 0.65s;
   z-index: 3;
 }
 
@@ -230,7 +230,7 @@ h1 {
 }
 
 .project-title {
-  color: var(--secondary);
+  color: black;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -239,7 +239,7 @@ h1 {
 }
 
 .project-title span {
-  color: var(--secondary);
+  color: black;
   text-align: center;
   margin: 0 auto;
   padding: 0;
