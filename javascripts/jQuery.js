@@ -19,7 +19,7 @@ $(function () {
     $(":root").css("--secondary", "black");
   };
   var fadeIn = function () {
-    $("#fade-in").animate({ height: "0%" }, { duration: 350, queue: false });
+    $("#fade-in").animate({ height: "0%" }, { duration: 950, queue: false });
   };
   var resetBorder = function () {
     $("#border").css("transform", "none");
