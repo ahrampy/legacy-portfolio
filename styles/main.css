@@ -257,7 +257,7 @@ h1 {
   margin: 2px 0 0;
   transition: 0.3s;
   opacity: 0;
-  background-color: var(--secondary);
+  background-color: black;
 }
 
 .project-title span:before {
