@@ -357,6 +357,7 @@ textarea {
   padding: 1vh;
   margin: 1vh;
   border: 1px solid var(--primary);
+  border-color: rgba(inherit, 0.5);
 }
 
 textarea:focus,
@@ -409,6 +410,7 @@ p {
 
 #prof-pic:hover {
   filter: grayscale(0%);
+  cursor: crosshair;
 }
 
 #techs {
@@ -434,6 +436,7 @@ p {
 
 #techs:hover .tech-img {
   filter: invert(100%);
+  cursor: crosshair;
 }
 
 #tech-name-box {
