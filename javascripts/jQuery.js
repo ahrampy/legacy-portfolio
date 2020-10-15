@@ -11,10 +11,10 @@ $(function () {
       e.matches ? setDark() : setLight();
     });
   $(window).on("load", () => {
-    fadeIn();
     checkDarkMode();
   });
   $(window).on("load resize", () => {
+    fadeIn();
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     if (mobile) return resetBorder();
     centerX = $("#border-container").width() / 2;
