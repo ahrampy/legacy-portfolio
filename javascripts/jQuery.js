@@ -11,12 +11,12 @@ $(function () {
     }
   };
   var setDark = function () {
-    $(":root").css("--primary", "black");
-    $(":root").css("--secondary", "white");
+    $(":root").css("--primary", "#333");
+    $(":root").css("--secondary", "#fff");
   };
   var setLight = function () {
-    $(":root").css("--primary", "white");
-    $(":root").css("--secondary", "black");
+    $(":root").css("--primary", "#fff");
+    $(":root").css("--secondary", "#333");
   };
   var fadeIn = function () {
     $("#fade-in").animate({ height: "0%" }, { duration: 950, queue: false });

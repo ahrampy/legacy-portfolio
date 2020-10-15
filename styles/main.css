@@ -1,6 +1,6 @@
 :root {
-  --primary: white;
-  --secondary: black;
+  --primary: #fff;
+  --secondary: #333;
 }
 
 body {
@@ -38,25 +38,19 @@ a {
   box-shadow: none;
 }
 
-#fade-in {
-  position: fixed;
-  background-color: var(--primary);
-  box-sizing: border-box;
-  background-clip: padding-box;
-  width: 100%;
-  height: 100%;
-  bottom: 0px;
-  left: 0px;
-  border-top: 2vh solid transparent;
-  border-image: linear-gradient(transparent, var(--primary)) 100% 1;
-  z-index: 10;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  color: #333;
 }
 
-#button-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1vh;
+img {
+  filter: invert(25%);
 }
 
 button {
@@ -77,6 +71,22 @@ button:focus {
   color: var(--secondary);
   cursor: pointer;
   box-shadow: inset 0 0 0 2em var(--primary);
+}
+
+/* outer */
+
+#fade-in {
+  position: fixed;
+  background-color: var(--primary);
+  box-sizing: border-box;
+  background-clip: padding-box;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  left: 0px;
+  border-top: 2vh solid transparent;
+  border-image: linear-gradient(transparent, var(--primary)) 100% 1;
+  z-index: 10;
 }
 
 #border-container {
@@ -103,6 +113,8 @@ button:focus {
   border-radius: 5px;
   transition: 0.2s;
 }
+
+/* inner */
 
 #flip-container {
   width: 50vw;
@@ -135,12 +147,17 @@ button:focus {
 
 #flip-card-window {
   position: absolute;
+  display: flex;
+  justify-content: flex-end;
   background-color: rgba(255, 255, 255, 0.1);
   width: 40vw;
   height: 60vh;
+  padding: 1%;
   border-radius: 5px;
   transform: translateZ(-20px);
 }
+
+/* front */
 
 #flip-card-front {
   transition: 0.3s;
@@ -151,9 +168,75 @@ h1 {
   padding: 1%;
 }
 
+#lightswitch {
+  width: 30px;
+  height: 30px;
+}
+
+#prof-pic {
+  width: 130px;
+  height: 130px;
+  margin: 1vw;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+#prof-pic:hover {
+  filter: grayscale(0%);
+  cursor: crosshair;
+}
+
+#button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh;
+}
+
+#techs {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.tech-img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+#techs:hover .tech-img {
+  filter: invert(100%);
+  cursor: crosshair;
+}
+
+#tech-name-box {
+  text-align: center;
+  width: 100px;
+  height: 25px;
+}
+
+#tech-name {
+  opacity: 0%;
+  padding: 10px;
+  transition: 0.25s;
+}
+
 #flip-card-back {
   transform: rotateY(180deg);
 }
+
+/* about */
 
 #about {
   display: none;
@@ -169,13 +252,22 @@ h1 {
 }
 
 #about-contact {
-  color: rgb(89, 89, 89);
+  color: #525781;
   border: none;
   width: auto;
   height: auto;
   margin: 0;
   padding: 0;
+  transition: 0.3s;
 }
+
+#about-contact:hover {
+  box-shadow: none;
+  text-decoration: underline;
+  color: var(--primary);
+}
+
+/* projects */
 
 #projects {
   display: none;
@@ -230,7 +322,7 @@ h1 {
 }
 
 .project-title {
-  color: black;
+  color: #333;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -239,11 +331,11 @@ h1 {
 }
 
 .project-title span {
-  color: black;
+  color: #333;
   text-align: center;
   margin: 0 auto;
   padding: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   position: relative;
 }
 
@@ -257,7 +349,7 @@ h1 {
   margin: 2px 0 0;
   transition: 0.3s;
   opacity: 0;
-  background-color: black;
+  background-color: #333;
 }
 
 .project-title span:before {
@@ -293,6 +385,8 @@ h1 {
   align-items: center;
 }
 
+/* resume */
+
 #resume {
   display: none;
   opacity: 0;
@@ -317,6 +411,8 @@ h1 {
   position: relative;
   z-index: 2;
 }
+
+/* contact */
 
 #contact {
   display: none;
@@ -397,56 +493,4 @@ p {
 
 #contact-links a:hover img {
   filter: invert(100%);
-}
-
-#prof-pic {
-  width: 130px;
-  height: 130px;
-  margin: 1vw;
-  border-radius: 50%;
-  filter: grayscale(100%);
-  transition: 0.3s;
-}
-
-#prof-pic:hover {
-  filter: grayscale(0%);
-  cursor: crosshair;
-}
-
-#techs {
-  width: 2em;
-  height: 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  padding: 10px;
-  user-select: none;
-  transition: 0.25s;
-}
-
-.tech-img {
-  width: 100%;
-  height: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  transition: 0.25s;
-}
-
-#techs:hover .tech-img {
-  filter: invert(100%);
-  cursor: crosshair;
-}
-
-#tech-name-box {
-  text-align: center;
-  width: 100px;
-  height: 25px;
-}
-
-#tech-name {
-  opacity: 0%;
-  padding: 10px;
-  transition: 0.25s;
 }
