@@ -16,19 +16,22 @@ $(function () {
   var setDark = function () {
     colorMode = "dark";
     $("#lightswitch").attr("src", "./images/mode/moon-filled.png");
-    $("#border").css({background: "linear-gradient(#9198e5, #f48e62)"});
+    $("#border").css({ background: "linear-gradient(#9198e5, #f48e62)" });
     $(":root").css("--primary", "#333");
     $(":root").css("--secondary", "#fff");
   };
   var setLight = function () {
     colorMode = "light";
     $("#lightswitch").attr("src", "./images/mode/sun-filled.png");
-    $("#border").css({background: "linear-gradient(#f48e62, #9198e5)"});
+    $("#border").css({ background: "linear-gradient(#f48e62, #9198e5)" });
     $(":root").css("--primary", "#fff");
     $(":root").css("--secondary", "#333");
   };
   var fadeIn = function () {
     $("#fade-in").animate({ height: "0%" }, { duration: 950, queue: false });
+    setTimeout(() => {
+      $("#fade-in").css("opacity", 0);
+    }, 900);
   };
   var resetBorder = function () {
     $("#border").css("transform", "none");
@@ -48,9 +51,9 @@ $(function () {
     });
   $(window).on("load", () => {
     checkDarkMode();
+    fadeIn();
   });
   $(window).on("load resize", () => {
-    fadeIn();
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     if (mobile) return resetBorder();
     centerX = $("#border-container").width() / 2;
