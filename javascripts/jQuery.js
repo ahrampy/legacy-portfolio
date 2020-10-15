@@ -27,12 +27,12 @@ $(function () {
     $(":root").css("--primary", "#fff");
     $(":root").css("--secondary", "#333");
   };
-  var fadeIn = function () {
-    $("#fade-in").animate({ height: "0%" }, { duration: 950, queue: false });
-    setTimeout(() => {
-      $("#fade-in").css("opacity", 0);
-    }, 900);
-  };
+  // var fadeIn = function () {
+  //   $("#fade-in").animate({ height: "0%" }, { duration: 950, queue: false });
+  //   setTimeout(() => {
+  //     $("#fade-in").css("opacity", 0);
+  //   }, 900);
+  // };
   var resetBorder = function () {
     $("#border").css("transform", "none");
   };
@@ -51,11 +51,14 @@ $(function () {
     });
   $(window).on("load resize", () => {
     checkDarkMode();
-    fadeIn();
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     if (mobile) return resetBorder();
     centerX = $("#border-container").width() / 2;
     centerY = $("#border-container").height() / 2;
+    setTimeout(() => {
+      // fadeIn();
+      $("#techs").css("opacity", 1)
+    }, 500);
   });
   $("#lightswitch").on("mouseover", (e) => {
     currMode = colorMode;

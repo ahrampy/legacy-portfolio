@@ -220,6 +220,7 @@ h1 {
   padding: 10px;
   user-select: none;
   transition: 0.3s;
+  opacity: 0;
 }
 
 .tech-img {
