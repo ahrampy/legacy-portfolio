@@ -45,7 +45,7 @@ $(function () {
     centerX = $("#border-container").width() / 2;
     centerY = $("#border-container").height() / 2;
   });
-  $("#border-container").mousemove((e) => {
+  $("#border-container").on("mousemove", (e) => {
     if (tracking && !mobile) {
       $("#border").css(
         "transform",
@@ -61,7 +61,8 @@ $(function () {
       );
     }
   });
-  $("#resume-frame").hover(
+  $("#resume-frame").on(
+    "hover",
     () => {
       tracking = false;
       resetBorder();
@@ -82,7 +83,7 @@ $(function () {
   $("#techs").on("beforeChange", (e, slick, curr) => {
     $("#tech-name").html("");
   });
-  $(".tech-img").hover(
+  $(".tech-img").on("hover",
     (e) => {
       $("#tech-name").html(e.target.alt);
       $("#tech-name").css("opacity", "100%");
@@ -91,17 +92,17 @@ $(function () {
       $("#tech-name").css("opacity", "0%");
     }
   );
-  $(".project-card").click((e) => {
+  $(".project-card").on("click", (e) => {
     $(e.currentTarget.children[0].click());
   });
-  $("#about-btn").click((e) => {
+  $("#about-btn").on("click", (e) => {
     e.preventDefault();
     hideFront();
     $("#about").css("display", "inline-block");
     $("#about").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(180deg)");
   });
-  $("#about-back").click((e) => {
+  $("#about-back").on("click", (e) => {
     e.preventDefault();
     $("#about").css("opacity", "0%");
     setTimeout(() => {
@@ -110,7 +111,7 @@ $(function () {
     $("#flip-card").css("transform", "rotateY(0deg)");
     showFront();
   });
-  $("#about-contact").click((e) => {
+  $("#about-contact").on("click", (e) => {
     e.preventDefault();
     $("#about").css("opacity", "0%");
     setTimeout(() => {
@@ -123,14 +124,14 @@ $(function () {
       $("#flip-card").css("transform", "rotateY(-180deg)");
     }, 300);
   });
-  $("#projects-btn").click((e) => {
+  $("#projects-btn").on("click", (e) => {
     e.preventDefault();
     hideFront();
     $("#projects").css("display", "block");
     $("#projects").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(180deg)");
   });
-  $("#projects-back").click((e) => {
+  $("#projects-back").on("click", (e) => {
     e.preventDefault();
     $("#projects").css("opacity", "0%");
     setTimeout(() => {
@@ -139,7 +140,7 @@ $(function () {
     $("#flip-card").css("transform", "rotateX(0deg)");
     showFront();
   });
-  $("#resume-btn").click((e) => {
+  $("#resume-btn").on("click", (e) => {
     e.preventDefault();
     hideFront();
     tracking = false;
@@ -148,7 +149,7 @@ $(function () {
     $("#resume").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(-180deg)");
   });
-  $("#resume-back").click((e) => {
+  $("#resume-back").on("click", (e) => {
     e.preventDefault();
     tracking = true;
     $("#resume").css("opacity", "0%");
@@ -158,14 +159,14 @@ $(function () {
     $("#flip-card").css("transform", "rotateX(0deg)");
     showFront();
   });
-  $("#contact-btn").click((e) => {
+  $("#contact-btn").on("click", (e) => {
     e.preventDefault();
     hideFront();
     $("#contact").css("display", "inline-block");
     $("#contact").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(-180deg)");
   });
-  $("#contact-back").click((e) => {
+  $("#contact-back").on("click", (e) => {
     e.preventDefault();
     $("#contact").css("opacity", "0%");
     setTimeout(() => {
