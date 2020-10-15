@@ -49,11 +49,9 @@ $(function () {
     .addEventListener("change", (e) => {
       e.matches ? setDark() : setLight();
     });
-  $(window).on("load", () => {
+  $(window).on("load resize", () => {
     checkDarkMode();
     fadeIn();
-  });
-  $(window).on("load resize", () => {
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     if (mobile) return resetBorder();
     centerX = $("#border-container").width() / 2;
