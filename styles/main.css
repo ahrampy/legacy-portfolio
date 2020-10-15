@@ -450,6 +450,7 @@ h1 {
   resize: none;
   width: 90%;
   height: 15vh;
+  border-radius: 5px;
 }
 
 #contact label {
@@ -458,6 +459,8 @@ h1 {
 
 #contact input {
   width: 80%;
+    border-radius: 5px;
+
 }
 
 #contact input,
