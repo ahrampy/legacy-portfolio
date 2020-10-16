@@ -118,28 +118,28 @@ $(function () {
       tracking = true;
     }
   );
-  // $("#techs").slick({
-  //   vertical: true,
-  //   autoplay: true,
-  //   arrows: false,
-  //   accessibility: false,
-  //   autoplaySpeed: 1000,
-  //   speed: 500,
-  //   zIndex: 1,
-  // });
-  // $("#techs").on("beforeChange", (e, slick, curr) => {
-  //   $("#tech-name").html("");
-  // });
-  // $(".tech-img").on(
-  //   "hover",
-  //   (e) => {
-  //     $("#tech-name").html(e.target.alt);
-  //     $("#tech-name").css("opacity", "100%");
-  //   },
-  //   () => {
-  //     $("#tech-name").css("opacity", "0%");
-  //   }
-  // );
+  $("#techs").slick({
+    vertical: true,
+    autoplay: true,
+    arrows: false,
+    accessibility: false,
+    autoplaySpeed: 1000,
+    speed: 500,
+    zIndex: 1,
+  });
+  $("#techs").on("beforeChange", (e, slick, curr) => {
+    $("#tech-name").html("");
+  });
+  $(".tech-img").on(
+    "hover",
+    (e) => {
+      $("#tech-name").html(e.target.alt);
+      $("#tech-name").css("opacity", "100%");
+    },
+    () => {
+      $("#tech-name").css("opacity", "0%");
+    }
+  );
   $(".project-card").on("click tap", (e) => {
     $(e.currentTarget.children[0].click());
   });
