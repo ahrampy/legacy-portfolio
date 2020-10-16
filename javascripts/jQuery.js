@@ -44,18 +44,18 @@ $(function () {
     $("#flip-card-front").css("opacity", "100%");
     $("#techs").slick("slickPlay");
   };
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      e.matches ? setDark() : setLight();
-    });
-  $(window).on("load", () => {
+  $(window).on("load resize", () => {
     checkDarkMode();
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     if (mobile) return resetBorder();
     centerX = $("#border-container").width() / 2;
     centerY = $("#border-container").height() / 2;
   });
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      e.matches ? setDark() : setLight();
+    });
   $("#lightswitch").on("mouseover", (e) => {
     currMode = colorMode;
     $("#switch-box").css("opacity", "0");
