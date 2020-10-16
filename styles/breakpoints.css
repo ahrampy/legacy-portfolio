@@ -69,11 +69,11 @@
   }
 
   #flip-card-window {
-    width: 80vw;
-    height: 60vh;
+    width: 60vw;
   }
 
   #button-box {
+    min-height: 160px;
     flex-direction: column;
   }
 
@@ -104,7 +104,7 @@
   }
 
   #techs {
-    padding-top: 2vh;
+    margin-top: 2vh;
   }
 
   #tech-name {

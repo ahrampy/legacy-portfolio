@@ -156,7 +156,6 @@ button:focus {
   height: 60vh;
   padding: 1%;
   border-radius: 5px;
-  transform: translateZ(-20px);
 }
 
 /* front */
