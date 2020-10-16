@@ -57,7 +57,6 @@ $(function () {
       e.matches ? setDark() : setLight();
     });
   $("#lightswitch").on("mouseover", (e) => {
-    e.preventDefault()
     currMode = colorMode;
     $("#switch-box").css("opacity", "0");
     clearTimeout(toggle);
@@ -71,7 +70,6 @@ $(function () {
     }, 200);
   });
   $("#lightswitch").on("mouseleave", (e) => {
-    e.preventDefault();
     if (currMode === colorMode) {
       $("#switch-box").css("opacity", "0");
     }
@@ -120,28 +118,28 @@ $(function () {
       tracking = true;
     }
   );
-  $("#techs").slick({
-    vertical: true,
-    autoplay: true,
-    arrows: false,
-    accessibility: false,
-    autoplaySpeed: 1000,
-    speed: 500,
-    zIndex: 1,
-  });
-  $("#techs").on("beforeChange", (e, slick, curr) => {
-    $("#tech-name").html("");
-  });
-  $(".tech-img").on(
-    "hover",
-    (e) => {
-      $("#tech-name").html(e.target.alt);
-      $("#tech-name").css("opacity", "100%");
-    },
-    () => {
-      $("#tech-name").css("opacity", "0%");
-    }
-  );
+  // $("#techs").slick({
+  //   vertical: true,
+  //   autoplay: true,
+  //   arrows: false,
+  //   accessibility: false,
+  //   autoplaySpeed: 1000,
+  //   speed: 500,
+  //   zIndex: 1,
+  // });
+  // $("#techs").on("beforeChange", (e, slick, curr) => {
+  //   $("#tech-name").html("");
+  // });
+  // $(".tech-img").on(
+  //   "hover",
+  //   (e) => {
+  //     $("#tech-name").html(e.target.alt);
+  //     $("#tech-name").css("opacity", "100%");
+  //   },
+  //   () => {
+  //     $("#tech-name").css("opacity", "0%");
+  //   }
+  // );
   $(".project-card").on("click tap", (e) => {
     $(e.currentTarget.children[0].click());
   });

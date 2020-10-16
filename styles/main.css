@@ -75,7 +75,7 @@ button:focus {
 
 /* outer */
 
-#fade-in {
+/* #fade-in {
   position: fixed;
   background-color: var(--primary);
   box-sizing: border-box;
@@ -88,7 +88,7 @@ button:focus {
   border-image: linear-gradient(transparent, var(--primary)) 100% 1;
   transition: 0.3s;
   z-index: 10;
-}
+} */
 
 #border-container {
   position: fixed;
