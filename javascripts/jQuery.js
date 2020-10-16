@@ -57,6 +57,7 @@ $(function () {
       e.matches ? setDark() : setLight();
     });
   $("#lightswitch").on("mouseover", (e) => {
+    e.preventDefault()
     currMode = colorMode;
     $("#switch-box").css("opacity", "0");
     clearTimeout(toggle);
@@ -70,6 +71,7 @@ $(function () {
     }, 200);
   });
   $("#lightswitch").on("mouseleave", (e) => {
+    e.preventDefault();
     if (currMode === colorMode) {
       $("#switch-box").css("opacity", "0");
     }
@@ -84,6 +86,7 @@ $(function () {
     }, 200);
   });
   $("#lightswitch").on("click tap", (e) => {
+    e.preventDefault();
     currMode = colorMode;
     if (colorMode === "light") {
       setDark();
