@@ -108,6 +108,11 @@ $(function () {
       );
     }
   });
+  $("#border-container").on("click tap", () => {
+    if (mobile) {
+      alert("testing!")
+    }
+  })
   $("#resume-frame").on(
     "hover",
     () => {
@@ -145,9 +150,6 @@ $(function () {
   });
   $("#about-btn").on("click tap", (e) => {
     e.preventDefault();
-    if (mobile) {
-      alert("testing!")
-    }
     hideFront();
     $("#about").css("display", "inline-block");
     $("#about").css("opacity", "100%");
