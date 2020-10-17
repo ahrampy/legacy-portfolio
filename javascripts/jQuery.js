@@ -2,31 +2,31 @@ $(function () {
   var centerX, centerY;
   var tracking = true;
   var mobile = false;
-  var colorMode = "light";
-  var currMode = "light";
-  var toggle = null;
-  var checkDarkMode = function () {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      setDark();
-    }
-  };
-  var setDark = function () {
-    colorMode = "dark";
-    $("#lightswitch").attr("src", "./images/mode/moon-filled.png");
-    $("#border").css({ background: "linear-gradient(#9198e5, #f48e62)" });
-    $(":root").css("--primary", "#333");
-    $(":root").css("--secondary", "#fff");
-  };
-  var setLight = function () {
-    colorMode = "light";
-    $("#lightswitch").attr("src", "./images/mode/sun-filled.png");
-    $("#border").css({ background: "linear-gradient(#f48e62, #9198e5)" });
-    $(":root").css("--primary", "#fff");
-    $(":root").css("--secondary", "#333");
-  };
+  // var colorMode = "light";
+  // var currMode = "light";
+  // var toggle = null;
+  // var checkDarkMode = function () {
+  //   if (
+  //     window.matchMedia &&
+  //     window.matchMedia("(prefers-color-scheme: dark)").matches
+  //   ) {
+  //     setDark();
+  //   }
+  // };
+  // var setDark = function () {
+  //   colorMode = "dark";
+  //   $("#lightswitch").attr("src", "./images/mode/moon-filled.png");
+  //   $("#border").css({ background: "linear-gradient(#9198e5, #f48e62)" });
+  //   $(":root").css("--primary", "#333");
+  //   $(":root").css("--secondary", "#fff");
+  // };
+  // var setLight = function () {
+  //   colorMode = "light";
+  //   $("#lightswitch").attr("src", "./images/mode/sun-filled.png");
+  //   $("#border").css({ background: "linear-gradient(#f48e62, #9198e5)" });
+  //   $(":root").css("--primary", "#fff");
+  //   $(":root").css("--secondary", "#333");
+  // };
   // var fadeIn = function () {
   //   $("#fade-in").animate({ height: "0%" }, { duration: 950, queue: false });
   //   setTimeout(() => {
@@ -45,53 +45,53 @@ $(function () {
     $("#techs").slick("slickPlay");
   };
   $(window).on("load resize", () => {
-    checkDarkMode();
+    // checkDarkMode();
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     if (mobile) return resetBorder();
     centerX = $("#border-container").width() / 2;
     centerY = $("#border-container").height() / 2;
   });
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      e.matches ? setDark() : setLight();
-    });
-  $("#lightswitch").on("mouseover", (e) => {
-    currMode = colorMode;
-    $("#switch-box").css("opacity", "0");
-    clearTimeout(toggle);
-    toggle = setTimeout(() => {
-      if (colorMode === "light") {
-        e.target.src = "./images/mode/moon.png";
-      } else {
-        e.target.src = "./images/mode/sun.png";
-      }
-      $("#switch-box").css("opacity", "1");
-    }, 200);
-  });
-  $("#lightswitch").on("mouseleave", (e) => {
-    if (currMode === colorMode) {
-      $("#switch-box").css("opacity", "0");
-    }
-    clearTimeout(toggle);
-    toggle = setTimeout(() => {
-      if (colorMode === "light") {
-        e.target.src = "./images/mode/sun-filled.png";
-      } else {
-        e.target.src = "./images/mode/moon-filled.png";
-      }
-      $("#switch-box").css("opacity", "1");
-    }, 200);
-  });
-  $("#lightswitch").click((e) => {
-    e.preventDefault();
-    currMode = colorMode;
-    if (colorMode === "light") {
-      setDark();
-    } else {
-      setLight();
-    }
-  });
+  // window
+  //   .matchMedia("(prefers-color-scheme: dark)")
+  //   .addEventListener("change", (e) => {
+  //     e.matches ? setDark() : setLight();
+  //   });
+  // $("#lightswitch").on("mouseover", (e) => {
+  //   currMode = colorMode;
+  //   $("#switch-box").css("opacity", "0");
+  //   clearTimeout(toggle);
+  //   toggle = setTimeout(() => {
+  //     if (colorMode === "light") {
+  //       e.target.src = "./images/mode/moon.png";
+  //     } else {
+  //       e.target.src = "./images/mode/sun.png";
+  //     }
+  //     $("#switch-box").css("opacity", "1");
+  //   }, 200);
+  // });
+  // $("#lightswitch").on("mouseleave", (e) => {
+  //   if (currMode === colorMode) {
+  //     $("#switch-box").css("opacity", "0");
+  //   }
+  //   clearTimeout(toggle);
+  //   toggle = setTimeout(() => {
+  //     if (colorMode === "light") {
+  //       e.target.src = "./images/mode/sun-filled.png";
+  //     } else {
+  //       e.target.src = "./images/mode/moon-filled.png";
+  //     }
+  //     $("#switch-box").css("opacity", "1");
+  //   }, 200);
+  // });
+  // $("#lightswitch").on("click", (e) => {
+  //   e.preventDefault();
+  //   currMode = colorMode;
+  //   if (colorMode === "light") {
+  //     setDark();
+  //   } else {
+  //     setLight();
+  //   }
+  // });
   $("#border-container").on("mousemove", (e) => {
     if (tracking && !mobile) {
       $("#border").css(
@@ -140,17 +140,17 @@ $(function () {
       $("#tech-name").css("opacity", "0%");
     }
   );
-  $(".project-card").click((e) => {
+  $(".project-card").on("click", (e) => {
     $(e.currentTarget.children[0].click());
   });
-  $("#about-btn").click((e) => {
+  $("#about-btn").on("click", (e) => {
     e.preventDefault();
     hideFront();
     $("#about").css("display", "inline-block");
     $("#about").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(180deg)");
   });
-  $("#about-back").click((e) => {
+  $("#about-back").on("click", (e) => {
     e.preventDefault();
     $("#about").css("opacity", "0%");
     setTimeout(() => {
@@ -159,7 +159,7 @@ $(function () {
     $("#flip-card").css("transform", "rotateY(0deg)");
     showFront();
   });
-  $("#about-contact").click((e) => {
+  $("#about-contact").on("click", (e) => {
     e.preventDefault();
     $("#about").css("opacity", "0%");
     setTimeout(() => {
@@ -172,14 +172,14 @@ $(function () {
       $("#flip-card").css("transform", "rotateY(-180deg)");
     }, 300);
   });
-  $("#projects-btn").click((e) => {
+  $("#projects-btn").on("click", (e) => {
     e.preventDefault();
     hideFront();
     $("#projects").css("display", "block");
     $("#projects").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(180deg)");
   });
-  $("#projects-back").click((e) => {
+  $("#projects-back").on("click", (e) => {
     e.preventDefault();
     $("#projects").css("opacity", "0%");
     setTimeout(() => {
@@ -188,7 +188,7 @@ $(function () {
     $("#flip-card").css("transform", "rotateX(0deg)");
     showFront();
   });
-  $("#resume-btn").click((e) => {
+  $("#resume-btn").on("click", (e) => {
     e.preventDefault();
     hideFront();
     tracking = false;
@@ -197,7 +197,7 @@ $(function () {
     $("#resume").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(-180deg)");
   });
-  $("#resume-back").click((e) => {
+  $("#resume-back").on("click", (e) => {
     e.preventDefault();
     tracking = true;
     $("#resume").css("opacity", "0%");
@@ -207,14 +207,14 @@ $(function () {
     $("#flip-card").css("transform", "rotateX(0deg)");
     showFront();
   });
-  $("#contact-btn").click((e) => {
+  $("#contact-btn").on("click", (e) => {
     e.preventDefault();
     hideFront();
     $("#contact").css("display", "inline-block");
     $("#contact").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(-180deg)");
   });
-  $("#contact-back").click((e) => {
+  $("#contact-back").on("click", (e) => {
     e.preventDefault();
     $("#contact").css("opacity", "0%");
     setTimeout(() => {
