@@ -83,7 +83,7 @@ $(function () {
       $("#switch-box").css("opacity", "1");
     }, 200);
   });
-  $("#lightswitch").on("click tap", (e) => {
+  $("#lightswitch").click((e) => {
     e.preventDefault();
     currMode = colorMode;
     if (colorMode === "light") {
@@ -108,11 +108,6 @@ $(function () {
       );
     }
   });
-  $("#border-container").on("click tap", () => {
-    if (mobile) {
-      alert("testing!")
-    }
-  })
   $("#resume-frame").on(
     "hover",
     () => {
@@ -145,17 +140,17 @@ $(function () {
       $("#tech-name").css("opacity", "0%");
     }
   );
-  $(".project-card").on("click tap", (e) => {
+  $(".project-card").click((e) => {
     $(e.currentTarget.children[0].click());
   });
-  $("#about-btn").on("click tap", (e) => {
+  $("#about-btn").click((e) => {
     e.preventDefault();
     hideFront();
     $("#about").css("display", "inline-block");
     $("#about").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(180deg)");
   });
-  $("#about-back").on("click tap", (e) => {
+  $("#about-back").click((e) => {
     e.preventDefault();
     $("#about").css("opacity", "0%");
     setTimeout(() => {
@@ -164,7 +159,7 @@ $(function () {
     $("#flip-card").css("transform", "rotateY(0deg)");
     showFront();
   });
-  $("#about-contact").on("click tap", (e) => {
+  $("#about-contact").click((e) => {
     e.preventDefault();
     $("#about").css("opacity", "0%");
     setTimeout(() => {
@@ -177,14 +172,14 @@ $(function () {
       $("#flip-card").css("transform", "rotateY(-180deg)");
     }, 300);
   });
-  $("#projects-btn").on("click tap", (e) => {
+  $("#projects-btn").click((e) => {
     e.preventDefault();
     hideFront();
     $("#projects").css("display", "block");
     $("#projects").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(180deg)");
   });
-  $("#projects-back").on("click tap", (e) => {
+  $("#projects-back").click((e) => {
     e.preventDefault();
     $("#projects").css("opacity", "0%");
     setTimeout(() => {
@@ -193,7 +188,7 @@ $(function () {
     $("#flip-card").css("transform", "rotateX(0deg)");
     showFront();
   });
-  $("#resume-btn").on("click tap", (e) => {
+  $("#resume-btn").click((e) => {
     e.preventDefault();
     hideFront();
     tracking = false;
@@ -202,7 +197,7 @@ $(function () {
     $("#resume").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(-180deg)");
   });
-  $("#resume-back").on("click tap", (e) => {
+  $("#resume-back").click((e) => {
     e.preventDefault();
     tracking = true;
     $("#resume").css("opacity", "0%");
@@ -212,14 +207,14 @@ $(function () {
     $("#flip-card").css("transform", "rotateX(0deg)");
     showFront();
   });
-  $("#contact-btn").on("click tap", (e) => {
+  $("#contact-btn").click((e) => {
     e.preventDefault();
     hideFront();
     $("#contact").css("display", "inline-block");
     $("#contact").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(-180deg)");
   });
-  $("#contact-back").on("click tap", (e) => {
+  $("#contact-back").click((e) => {
     e.preventDefault();
     $("#contact").css("opacity", "0%");
     setTimeout(() => {
