@@ -5,6 +5,13 @@ $(function () {
   var colorMode = "light";
   var currMode = "light";
   var toggle = null;
+  var checkMobile = function () {
+    mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
+    if (mobile) {
+      resetBorder();
+      hideSwitch();
+    }
+  };
   var checkDarkMode = function () {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setDark();
@@ -33,6 +40,9 @@ $(function () {
   var resetBorder = function () {
     $("#border").css("transform", "none");
   };
+  var hideSwitch = function () {
+    $("#switch-box").css("display", "none");
+  };
   var hideFront = function () {
     $("#flip-card-front").css("opacity", "0%");
     $("#techs").slick("slickPause");
@@ -42,9 +52,8 @@ $(function () {
     $("#techs").slick("slickPlay");
   };
   $(window).on("load resize", () => {
+    checkMobile();
     checkDarkMode();
-    mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
-    if (mobile) return resetBorder();
     centerX = $("#border-container").width() / 2;
     centerY = $("#border-container").height() / 2;
   });
