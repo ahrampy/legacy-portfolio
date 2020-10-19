@@ -73,10 +73,10 @@
     height: 60vh;
   }
 
-  #button-box {
+  /* #button-box {
     min-height: 160px;
     flex-direction: column;
-  }
+  } */
 
   #prof-pic {
     width: 100px;
