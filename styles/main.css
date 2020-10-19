@@ -156,6 +156,7 @@ button:focus {
   height: 60vh;
   padding: 1%;
   border-radius: 5px;
+  z-index: 0;
 }
 
 /* front */
@@ -185,6 +186,7 @@ h1 {
   height: 25px;
   z-index: 1;
   filter: invert(0%);
+  z-index: 1;
 }
 
 #prof-pic {
@@ -206,7 +208,7 @@ h1 {
   justify-content: center;
   align-items: center;
   padding: 1vh;
-  z-index: 0;
+  z-index: 2;
 }
 
 #techs {
