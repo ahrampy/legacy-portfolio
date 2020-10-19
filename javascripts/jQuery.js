@@ -61,7 +61,7 @@ $(function () {
   $(window).on("load", () => {
     findCenter();
     checkMobile();
-    checkDarkMode();
+    // checkDarkMode();
   });
   $(window).on("resize", () => {
     findCenter();
