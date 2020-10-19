@@ -177,10 +177,6 @@ h1 {
   z-index: 2;
 }
 
-#switch-box:hover {
-  cursor: pointer;
-}
-
 #lightswitch {
   background-color: none;
   width: 25px;
