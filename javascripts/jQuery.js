@@ -7,12 +7,7 @@ $(function () {
   var toggle = null;
   var checkMobile = function () {
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
-    if (mobile) {
-      resetBorder();
-      alert("testing");
-    } else {
-      showSwitch();
-    }
+    mobile ? resetBorder() : showSwitch();
   };
   var checkDarkMode = function () {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -96,6 +91,7 @@ $(function () {
   $("#lightswitch").on("click", (e) => {
     e.preventDefault();
     currMode = colorMode;
+    clearTimeout(toggle);
     if (colorMode === "light") {
       setDark();
     } else {
