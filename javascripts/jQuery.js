@@ -12,14 +12,14 @@ $(function () {
   };
   var setDark = function () {
     colorMode = "dark";
-    $("#lightswitch").attr("src", "./images/mode/moon-filled.png");
+    $("#lightswitch > img").attr("src", "./images/mode/moon-filled.png");
     $("#border").css({ background: "linear-gradient(#9198e5, #f48e62)" });
     $(":root").css("--primary", "#333");
     $(":root").css("--secondary", "#fff");
   };
   var setLight = function () {
     colorMode = "light";
-    $("#lightswitch").attr("src", "./images/mode/sun-filled.png");
+    $("#lightswitch > img").attr("src", "./images/mode/sun-filled.png");
     $("#border").css({ background: "linear-gradient(#f48e62, #9198e5)" });
     $(":root").css("--primary", "#fff");
     $(":root").css("--secondary", "#333");
@@ -53,29 +53,31 @@ $(function () {
     .addEventListener("change", (e) => {
       e.matches ? setDark() : setLight();
     });
-  $("#lightswitch").on("mouseover", (e) => {
+  $("#lightswitch").on("mouseover", () => {
+    if (mobile) return;
     currMode = colorMode;
     $("#switch-box").css("opacity", "0");
     clearTimeout(toggle);
     toggle = setTimeout(() => {
       if (colorMode === "light") {
-        e.target.src = "./images/mode/moon.png";
+        $("#lightswitch > img").attr("src", "./images/mode/moon.png");
       } else {
-        e.target.src = "./images/mode/sun.png";
+        $("#lightswitch > img").attr("src", "./images/mode/sun.png");
       }
       $("#switch-box").css("opacity", "1");
     }, 200);
   });
-  $("#lightswitch").on("mouseleave", (e) => {
+  $("#lightswitch").on("mouseleave", () => {
+    if (mobile) return;
     if (currMode === colorMode) {
       $("#switch-box").css("opacity", "0");
     }
     clearTimeout(toggle);
     toggle = setTimeout(() => {
       if (colorMode === "light") {
-        e.target.src = "./images/mode/sun-filled.png";
+        $("#lightswitch > img").attr("src", "./images/mode/sun-filled.png");
       } else {
-        e.target.src = "./images/mode/moon-filled.png";
+        $("#lightswitch > img").attr("src", "./images/mode/moon-filled.png");
       }
       $("#switch-box").css("opacity", "1");
     }, 200);

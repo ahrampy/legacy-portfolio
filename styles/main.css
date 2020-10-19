@@ -182,10 +182,20 @@ h1 {
 }
 
 #lightswitch {
+  background-color: none;
   width: 25px;
   height: 25px;
-  filter: invert(0%);
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  box-shadow: none;
   z-index: 1;
+}
+
+#lightswitch > img {
+  width: 25px;
+  height: 25px;
+  filter: none;
 }
 
 #prof-pic {
