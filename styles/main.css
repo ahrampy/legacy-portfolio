@@ -171,6 +171,7 @@ h1 {
 }
 
 #switch-box {
+  display: none;
   width: 25px;
   height: 25px;
   transition: 0.2s;

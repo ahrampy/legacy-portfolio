@@ -9,7 +9,9 @@ $(function () {
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     if (mobile) {
       resetBorder();
-      hideSwitch();
+      alert("testing");
+    } else {
+      showSwitch();
     }
   };
   var checkDarkMode = function () {
@@ -40,8 +42,8 @@ $(function () {
   var resetBorder = function () {
     $("#border").css("transform", "none");
   };
-  var hideSwitch = function () {
-    $("#switch-box").css("display", "none");
+  var showSwitch = function () {
+    $("#switch-box").css("display", "block");
   };
   var hideFront = function () {
     $("#flip-card-front").css("opacity", "0%");
