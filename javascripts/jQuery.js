@@ -8,27 +8,27 @@ $(function () {
   var checkMobile = function () {
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     mobile ? resetBorder() : showSwitch();
-    if (mobile) alert("test: add darkMode / no switch");
+    if (mobile) alert("test: rm darkMode / with switch");
   };
-  var checkDarkMode = function () {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setDark();
-    }
-  };
-  var setDark = function () {
-    colorMode = "dark";
-    $("#lightswitch > img").attr("src", "./images/mode/moon-filled.png");
-    $("#border").css({ background: "linear-gradient(#9198e5, #f48e62)" });
-    $(":root").css("--primary", "#333");
-    $(":root").css("--secondary", "#fff");
-  };
-  var setLight = function () {
-    colorMode = "light";
-    $("#lightswitch > img").attr("src", "./images/mode/sun-filled.png");
-    $("#border").css({ background: "linear-gradient(#f48e62, #9198e5)" });
-    $(":root").css("--primary", "#fff");
-    $(":root").css("--secondary", "#333");
-  };
+  // var checkDarkMode = function () {
+  //   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  //     setDark();
+  //   }
+  // };
+  // var setDark = function () {
+  //   colorMode = "dark";
+  //   $("#lightswitch > img").attr("src", "./images/mode/moon-filled.png");
+  //   $("#border").css({ background: "linear-gradient(#9198e5, #f48e62)" });
+  //   $(":root").css("--primary", "#333");
+  //   $(":root").css("--secondary", "#fff");
+  // };
+  // var setLight = function () {
+  //   colorMode = "light";
+  //   $("#lightswitch > img").attr("src", "./images/mode/sun-filled.png");
+  //   $("#border").css({ background: "linear-gradient(#f48e62, #9198e5)" });
+  //   $(":root").css("--primary", "#fff");
+  //   $(":root").css("--secondary", "#333");
+  // };
   // var fadeIn = function () {
   //   $("#fade-in").animate({ height: "0%" }, { duration: 950, queue: false });
   //   setTimeout(() => {
@@ -53,11 +53,11 @@ $(function () {
     $("#flip-card-front").css("opacity", "100%");
     $("#techs").slick("slickPlay");
   };
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      e.matches ? setDark() : setLight();
-    });
+  // window
+  //   .matchMedia("(prefers-color-scheme: dark)")
+  //   .addEventListener("change", (e) => {
+  //     e.matches ? setDark() : setLight();
+  //   });
   $(window).on("load", () => {
     findCenter();
     checkMobile();
@@ -66,45 +66,45 @@ $(function () {
   $(window).on("resize", () => {
     findCenter();
   });
-  // $("#lightswitch").on("mouseover", () => {
-  //   if (mobile) return;
-  //   currMode = colorMode;
-  //   $("#switch-box").css("opacity", "0");
-  //   clearTimeout(toggle);
-  //   toggle = setTimeout(() => {
-  //     if (colorMode === "light") {
-  //       $("#lightswitch > img").attr("src", "./images/mode/moon.png");
-  //     } else {
-  //       $("#lightswitch > img").attr("src", "./images/mode/sun.png");
-  //     }
-  //     $("#switch-box").css("opacity", "1");
-  //   }, 200);
-  // });
-  // $("#lightswitch").on("mouseleave", () => {
-  //   if (mobile) return;
-  //   if (currMode === colorMode) {
-  //     $("#switch-box").css("opacity", "0");
-  //   }
-  //   clearTimeout(toggle);
-  //   toggle = setTimeout(() => {
-  //     if (colorMode === "light") {
-  //       $("#lightswitch > img").attr("src", "./images/mode/sun-filled.png");
-  //     } else {
-  //       $("#lightswitch > img").attr("src", "./images/mode/moon-filled.png");
-  //     }
-  //     $("#switch-box").css("opacity", "1");
-  //   }, 200);
-  // });
-  // $("#lightswitch").on("click", (e) => {
-  //   e.preventDefault();
-  //   currMode = colorMode;
-  //   clearTimeout(toggle);
-  //   if (colorMode === "light") {
-  //     setDark();
-  //   } else {
-  //     setLight();
-  //   }
-  // });
+  $("#lightswitch").on("mouseover", () => {
+    if (mobile) return;
+    currMode = colorMode;
+    $("#switch-box").css("opacity", "0");
+    clearTimeout(toggle);
+    toggle = setTimeout(() => {
+      if (colorMode === "light") {
+        $("#lightswitch > img").attr("src", "./images/mode/moon.png");
+      } else {
+        $("#lightswitch > img").attr("src", "./images/mode/sun.png");
+      }
+      $("#switch-box").css("opacity", "1");
+    }, 200);
+  });
+  $("#lightswitch").on("mouseleave", () => {
+    if (mobile) return;
+    if (currMode === colorMode) {
+      $("#switch-box").css("opacity", "0");
+    }
+    clearTimeout(toggle);
+    toggle = setTimeout(() => {
+      if (colorMode === "light") {
+        $("#lightswitch > img").attr("src", "./images/mode/sun-filled.png");
+      } else {
+        $("#lightswitch > img").attr("src", "./images/mode/moon-filled.png");
+      }
+      $("#switch-box").css("opacity", "1");
+    }, 200);
+  });
+  $("#lightswitch").on("click", (e) => {
+    e.preventDefault();
+    currMode = colorMode;
+    clearTimeout(toggle);
+    if (colorMode === "light") {
+      setDark();
+    } else {
+      setLight();
+    }
+  });
   $("#border-container").on("mousemove", (e) => {
     if (tracking && !mobile) {
       $("#border").css(
@@ -146,6 +146,7 @@ $(function () {
   $(".tech-img").on(
     "hover",
     (e) => {
+      alert("hover");
       $("#tech-name").html(e.target.alt);
       $("#tech-name").css("opacity", "100%");
     },
