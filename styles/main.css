@@ -203,6 +203,10 @@ h1 {
   cursor: crosshair;
 }
 
+#intro-text {
+  width: 90%;
+}
+
 #button-box {
   display: flex;
   justify-content: center;

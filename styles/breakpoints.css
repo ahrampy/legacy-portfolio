@@ -74,7 +74,7 @@
   }
 
   #button-box {
-    height: 160px;
+    min-height: 160px;
     flex-direction: column;
   }
 
