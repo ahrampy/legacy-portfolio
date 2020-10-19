@@ -6,10 +6,7 @@ $(function () {
   var currMode = "light";
   var toggle = null;
   var checkDarkMode = function () {
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setDark();
     }
   };
