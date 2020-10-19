@@ -74,7 +74,7 @@
   }
 
   #button-box {
-    min-height: 160px;
+    height: 160px;
     flex-direction: column;
   }
 
@@ -105,7 +105,9 @@
   }
 
   #techs {
-    margin-top: 2vh;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
   }
 
   #tech-name {

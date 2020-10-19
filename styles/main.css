@@ -210,17 +210,13 @@ h1 {
 }
 
 #techs {
-  width: 2em;
-  height: 2em;
+  width: 85px;
+  height: 85px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
   padding: 10px;
   user-select: none;
-  transition: 0.3s;
-  z-index: 0;
 }
 
 .tech-img {
