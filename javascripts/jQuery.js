@@ -61,6 +61,7 @@ $(function () {
     findCenter();
     checkMobile();
     checkDarkMode();
+    // fadeIn();
   });
   $(window).on("resize", () => {
     findCenter();
@@ -94,7 +95,7 @@ $(function () {
       $("#switch-box").css("opacity", "1");
     }, 200);
   });
-  $("#lightswitch").on("click", (e) => {
+  $("#lightswitch").click((e) => {
     e.preventDefault();
     currMode = colorMode;
     clearTimeout(toggle);
@@ -139,11 +140,10 @@ $(function () {
     speed: 500,
     zIndex: 1,
   });
-  $("#techs").on("beforeChange", (e, slick, curr) => {
+  $("#techs").on("beforeChange", () => {
     $("#tech-name").html("");
   });
-  $(".tech-img").on(
-    "hover",
+  $(".tech-img").hover(
     (e) => {
       $("#tech-name").html(e.target.alt);
       $("#tech-name").css("opacity", "100%");
@@ -152,17 +152,17 @@ $(function () {
       $("#tech-name").css("opacity", "0%");
     }
   );
-  $(".project-card").on("click", (e) => {
+  $(".project-card").click((e) => {
     $(e.currentTarget.children[0].click());
   });
-  $("#about-btn").on("click", (e) => {
+  $("#about-btn").click((e) => {
     e.preventDefault();
     hideFront();
     $("#about").css("display", "inline-block");
     $("#about").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(180deg)");
   });
-  $("#about-back").on("click", (e) => {
+  $("#about-back").click((e) => {
     e.preventDefault();
     $("#about").css("opacity", "0%");
     setTimeout(() => {
@@ -171,7 +171,7 @@ $(function () {
     $("#flip-card").css("transform", "rotateY(0deg)");
     showFront();
   });
-  $("#about-contact").on("click", (e) => {
+  $("#about-contact").click((e) => {
     e.preventDefault();
     $("#about").css("opacity", "0%");
     setTimeout(() => {
@@ -184,14 +184,14 @@ $(function () {
       $("#flip-card").css("transform", "rotateY(-180deg)");
     }, 300);
   });
-  $("#projects-btn").on("click", (e) => {
+  $("#projects-btn").click((e) => {
     e.preventDefault();
     hideFront();
     $("#projects").css("display", "block");
     $("#projects").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(180deg)");
   });
-  $("#projects-back").on("click", (e) => {
+  $("#projects-back").click((e) => {
     e.preventDefault();
     $("#projects").css("opacity", "0%");
     setTimeout(() => {
@@ -200,7 +200,7 @@ $(function () {
     $("#flip-card").css("transform", "rotateX(0deg)");
     showFront();
   });
-  $("#resume-btn").on("click", (e) => {
+  $("#resume-btn").click((e) => {
     e.preventDefault();
     hideFront();
     tracking = false;
@@ -209,7 +209,7 @@ $(function () {
     $("#resume").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(-180deg)");
   });
-  $("#resume-back").on("click", (e) => {
+  $("#resume-back").click((e) => {
     e.preventDefault();
     tracking = true;
     $("#resume").css("opacity", "0%");
@@ -219,14 +219,14 @@ $(function () {
     $("#flip-card").css("transform", "rotateX(0deg)");
     showFront();
   });
-  $("#contact-btn").on("click", (e) => {
+  $("#contact-btn").click((e) => {
     e.preventDefault();
     hideFront();
     $("#contact").css("display", "inline-block");
     $("#contact").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(-180deg)");
   });
-  $("#contact-back").on("click", (e) => {
+  $("#contact-back").click((e) => {
     e.preventDefault();
     $("#contact").css("opacity", "0%");
     setTimeout(() => {
