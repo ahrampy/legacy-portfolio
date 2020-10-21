@@ -121,8 +121,7 @@ $(function () {
       );
     }
   });
-  $("#resume-frame").on(
-    "hover",
+  $("#resume-frame").hover(
     () => {
       tracking = false;
       resetBorder();
@@ -203,8 +202,6 @@ $(function () {
   $("#resume-btn").click((e) => {
     e.preventDefault();
     hideFront();
-    tracking = false;
-    $("#border").css("transform", "none");
     $("#resume").css("display", "inline-block");
     $("#resume").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(-180deg)");
