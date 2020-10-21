@@ -57,14 +57,11 @@ $(function () {
     .addEventListener("change", (e) => {
       e.matches ? setDark() : setLight();
     });
-  $(window).on("load", () => {
+  $(window).on("load resize", () => {
     findCenter();
     checkMobile();
     checkDarkMode();
     // fadeIn();
-  });
-  $(window).on("resize", () => {
-    findCenter();
   });
   $("#lightswitch").on("mouseover", () => {
     if (mobile) return;
