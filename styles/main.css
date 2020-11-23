@@ -241,7 +241,6 @@ h1 {
 
 #techs:hover .tech-img {
   filter: invert(100%);
-  cursor: crosshair;
 }
 
 #tech-name-box {
