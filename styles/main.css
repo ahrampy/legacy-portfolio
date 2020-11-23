@@ -207,7 +207,6 @@ h1 {
 
 #prof-pic:hover {
   filter: grayscale(0%);
-  cursor: crosshair;
 }
 
 #intro-text {
