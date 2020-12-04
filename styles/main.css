@@ -203,6 +203,7 @@ h1 {
   border-radius: 50%;
   filter: grayscale(100%);
   transition: 0.3s;
+  transform: translateZ(10px);
 }
 
 #prof-pic:hover {
