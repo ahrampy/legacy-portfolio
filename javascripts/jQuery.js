@@ -104,10 +104,10 @@ $(function () {
     }
   });
   $("#border-container").on("mousemove", (e) => {
-    let checkTime = Date.now();
-    if (checkTime - time > 100) {
-      time = checkTime;
-      if (tracking && !mobile) {
+    if (tracking && !mobile) {
+      let checkTime = Date.now();
+      if (checkTime - time > 100) {
+        time = checkTime;
         $("#border").css(
           "transform",
           `rotateX(${(
