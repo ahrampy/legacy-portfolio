@@ -1,54 +1,55 @@
 $(function () {
-  var centerX, centerY;
-  var tracking = true;
-  var mobile = false;
-  var colorMode = "light";
-  var currMode = "light";
-  var toggle = null;
-  var checkMobile = function () {
+  let centerX, centerY;
+  let tracking = true;
+  let mobile = false;
+  let colorMode = "light";
+  let currMode = "light";
+  let toggle = null;
+  let time = Date.now();
+  const checkMobile = function () {
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     mobile ? resetBorder() : showSwitch();
   };
-  var checkDarkMode = function () {
+  const checkDarkMode = function () {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setDark();
     }
   };
-  var setDark = function () {
+  const setDark = function () {
     colorMode = "dark";
     $("#lightswitch > img").attr("src", "./images/mode/moon-filled.png");
     $("#border").css({ background: "linear-gradient(#9198e5, #f48e62)" });
     $(":root").css("--primary", "#333");
     $(":root").css("--secondary", "#fff");
   };
-  var setLight = function () {
+  const setLight = function () {
     colorMode = "light";
     $("#lightswitch > img").attr("src", "./images/mode/sun-filled.png");
     $("#border").css({ background: "linear-gradient(#f48e62, #9198e5)" });
     $(":root").css("--primary", "#fff");
     $(":root").css("--secondary", "#333");
   };
-  // var fadeIn = function () {
+  // const fadeIn = function () {
   //   $("#fade-in").animate({ height: "0%" }, { duration: 950, queue: false });
   //   setTimeout(() => {
   //     $("#fade-in").css("opacity", 0);
   //   }, 900);
   // };
-  var findCenter = function () {
+  const findCenter = function () {
     centerX = $("#border-container").width() / 2;
     centerY = $("#border-container").height() / 2;
   };
-  var resetBorder = function () {
+  const resetBorder = function () {
     $("#border").css("transform", "none");
   };
-  var showSwitch = function () {
+  const showSwitch = function () {
     $("#switch-box").css("display", "block");
   };
-  var hideFront = function () {
+  const hideFront = function () {
     $("#flip-card-front").css("opacity", "0%");
     $("#techs").slick("slickPause");
   };
-  var showFront = function () {
+  const showFront = function () {
     $("#flip-card-front").css("opacity", "100%");
     $("#techs").slick("slickPlay");
   };
@@ -103,19 +104,23 @@ $(function () {
     }
   });
   $("#border-container").on("mousemove", (e) => {
-    if (tracking && !mobile) {
-      $("#border").css(
-        "transform",
-        `rotateX(${(
-          ((e.pageY - centerY) * -1) /
-          $("#border").outerHeight() /
-          2
-        ).toFixed(2)}deg) rotateY(${(
-          (e.pageX - centerX) /
-          $("#border").outerWidth() /
-          2
-        ).toFixed(2)}deg)`
-      );
+    let checkTime = Date.now();
+    if (checkTime - time > 100) {
+      time = checkTime;
+      if (tracking && !mobile) {
+        $("#border").css(
+          "transform",
+          `rotateX(${(
+            ((e.pageY - centerY) * -1) /
+            $("#border").outerHeight() /
+            2
+          ).toFixed(2)}deg) rotateY(${(
+            (e.pageX - centerX) /
+            $("#border").outerWidth() /
+            2
+          ).toFixed(2)}deg)`
+        );
+      }
     }
   });
   $("#resume-frame").hover(
