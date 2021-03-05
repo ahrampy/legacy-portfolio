@@ -313,7 +313,7 @@ h1 {
   font-size: 15px;
   background-color: rgba(255, 255, 255, 0.1);
   padding: 2.5vh 2vh;
-  margin: 2vw;
+  margin: 10px;
   width: 20vw;
   height: 60vh;
   border-radius: 5px;
@@ -352,7 +352,7 @@ h1 {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  margin: 0 0 20px;
+  margin: 0 0 20px 0;
 }
 
 .project-title span {
@@ -371,7 +371,7 @@ h1 {
   bottom: -5px;
   width: 0px;
   height: 1px;
-  margin: 2px 0 0;
+  margin: 2px 0;
   transition: 0.3s;
   opacity: 0;
   background-color: #333;
