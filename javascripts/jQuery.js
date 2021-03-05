@@ -1,4 +1,4 @@
-$(function () {
+$(() => {
   let centerX, centerY;
   let tracking = true;
   let mobile = false;
@@ -6,50 +6,55 @@ $(function () {
   let currMode = "light";
   let toggle = null;
   let time = Date.now();
-  const checkMobile = function () {
+  const checkMobile = () => {
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     mobile ? resetBorder() : showSwitch();
   };
-  const checkDarkMode = function () {
+  const checkDarkMode = () => {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setDark();
     }
   };
-  const setDark = function () {
+  const setDark = () => {
     colorMode = "dark";
     $("#lightswitch > img").attr("src", "./images/mode/moon-filled.png");
     $("#border").css({ background: "linear-gradient(#9198e5, #f48e62)" });
     $(":root").css("--primary", "#333");
     $(":root").css("--secondary", "#fff");
   };
-  const setLight = function () {
+  const setLight = () => {
     colorMode = "light";
     $("#lightswitch > img").attr("src", "./images/mode/sun-filled.png");
     $("#border").css({ background: "linear-gradient(#f48e62, #9198e5)" });
     $(":root").css("--primary", "#fff");
     $(":root").css("--secondary", "#333");
   };
-  // const fadeIn = function () {
+  const fadeIcons = () => {
+    setTimeout(() => {
+      $("#techs").css("opacity", "100%");
+    }, 1000);
+  };
+  // const fadeIn = () => {
   //   $("#fade-in").animate({ height: "0%" }, { duration: 950, queue: false });
   //   setTimeout(() => {
   //     $("#fade-in").css("opacity", 0);
   //   }, 900);
   // };
-  const findCenter = function () {
+  const findCenter = () => {
     centerX = $("#border-container").width() / 2;
     centerY = $("#border-container").height() / 2;
   };
-  const resetBorder = function () {
+  const resetBorder = () => {
     $("#border").css("transform", "none");
   };
-  const showSwitch = function () {
+  const showSwitch = () => {
     $("#switch-box").css("display", "block");
   };
-  const hideFront = function () {
+  const hideFront = () => {
     $("#flip-card-front").css("opacity", "0%");
     $("#techs").slick("slickPause");
   };
-  const showFront = function () {
+  const showFront = () => {
     $("#flip-card-front").css("opacity", "100%");
     $("#techs").slick("slickPlay");
   };
@@ -62,6 +67,7 @@ $(function () {
     findCenter();
     checkMobile();
     checkDarkMode();
+    fadeIcons();
     // fadeIn();
   });
   $("#lightswitch").on("mouseover", () => {
@@ -137,8 +143,8 @@ $(function () {
     autoplay: true,
     arrows: false,
     accessibility: false,
-    autoplaySpeed: 1000,
-    speed: 500,
+    autoplaySpeed: 1500,
+    speed: 1000,
     zIndex: 1,
   });
   $("#techs").on("beforeChange", () => {
