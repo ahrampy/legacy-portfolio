@@ -350,7 +350,6 @@ h1 {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  padding-top: 2vh;
   margin: 0 0 20px;
 }
 
