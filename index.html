@@ -1,324 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>adrian rampy</title>
-    <meta name="description" content="a simple portfolio page for my projects, resume, about me, and contact info">
 
-    <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="adrian rampy">
-    <meta itemprop="description" content="a simple portfolio page for my projects, resume, about me, and contact info">
-    <meta itemprop="image" content="/images/meta.png">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>adrian rampy</title>
+  <meta name="description" content="a simple portfolio page for my projects, resume, about me, and contact info">
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://www.ahrampy.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="adrian rampy">
-    <meta property="og:description" content="a simple portfolio page for my projects, resume, about me, and contact info">
-    <meta property="og:image" content="/images/meta.png">
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="adrian rampy">
+  <meta itemprop="description" content="a simple portfolio page for my projects, resume, about me, and contact info">
+  <meta itemprop="image" content="/images/meta.png">
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="adrian rampy">
-    <meta name="twitter:description" content="a simple portfolio page for my projects, resume, about me, and contact info">
-    <meta name="twitter:image" content="/images/meta.png">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://www.ahrampy.com">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="adrian rampy">
+  <meta property="og:description" content="a simple portfolio page for my projects, resume, about me, and contact info">
+  <meta property="og:image" content="/images/meta.png">
 
-    <link rel=icon href=images/ar.ico>
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/breakpoints.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="javascripts/jQuery.js"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
-    />
-  </head>
-  <body>
-    <!-- <span id="fade-in"></span> -->
-    <div id="border-container">
-      <div id="border">
-        <div id="flip-container">
-          <div id="flip-card">
-            <div id="flip-card-front">
-              <div id="flip-card-window">
-                <div id="switch-box">
-                  <button id="lightswitch">
-                    <img src="./images/mode/sun-filled.png" alt="lightswitch"/>
-                  </button>
-                </div>
-              </div>
-              <img src="./images/prof.png" id="prof-pic" alt="headshot" />
-              <div id="intro-text">
-                <h1>hi, i'm adrian</h1>
-                <p>i design and build things online</p>
-              </div>
-              <div id="button-box">
-                <button id="about-btn">about</button>
-                <button id="projects-btn">projects</button>
-                <button id="resume-btn">resume</button>
-                <button id="contact-btn">contact</button>
-              </div>
-              <div id="techs">
-                <img
-                  src="./images/techs/html5.png"
-                  class="tech-img"
-                  alt="html5"
-                />
-                <img
-                  src="./images/techs/css3.png"
-                  class="tech-img"
-                  alt="css3"
-                />
-                <img
-                  src="./images/techs/javascript.png"
-                  class="tech-img"
-                  alt="javascript"
-                />
-                <img
-                  src="./images/techs/react.png"
-                  class="tech-img"
-                  alt="react"
-                />
-                <img
-                  src="./images/techs/redux.png"
-                  class="tech-img"
-                  alt="redux"
-                />
-                <img
-                  src="./images/techs/ruby.png"
-                  class="tech-img"
-                  alt="ruby"
-                />
-                <img
-                  src="./images/techs/rails.png"
-                  class="tech-img"
-                  alt="rails"
-                />
-                <img
-                  src="./images/techs/postgresql.png"
-                  class="tech-img"
-                  alt="postgresql"
-                />
-                <img
-                  src="./images/techs/mongodb.png"
-                  class="tech-img"
-                  alt="mongodb"
-                />
-                <img
-                  src="./images/techs/firebase.png"
-                  class="tech-img"
-                  alt="firebase"
-                />
-                <img
-                  src="./images/techs/webpack.png"
-                  class="tech-img"
-                  alt="webpack"
-                />
-              </div>
-              <div id="tech-name-box">
-                <span id="tech-name"></span>
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="adrian rampy">
+  <meta name="twitter:description"
+    content="a simple portfolio page for my projects, resume, about me, and contact info">
+  <meta name="twitter:image" content="/images/meta.png">
+
+  <link rel=icon href=images/ar.ico>
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/breakpoints.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="javascripts/jQuery.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+</head>
+
+<body>
+  <!-- <span id="fade-in"></span> -->
+  <div id="border-container">
+    <div id="border">
+      <div id="flip-container">
+        <div id="flip-card">
+          <div id="flip-card-front">
+            <div id="flip-card-window">
+              <div id="switch-box">
+                <button id="lightswitch">
+                  <img src="./images/mode/sun-filled.png" alt="lightswitch" />
+                </button>
               </div>
             </div>
-            <div id="flip-card-back">
-              <div id="about">
-                <h1>a little about me</h1>
-                <p>
-                  i like making things. i also like to think about making things, how best to make them, and how to make them even better. puzzling through complex systems to a working, optimized solution is how i find myself spending my free time, and while i’m doing other things i like to do, like working outdoors, hiking, playing old school platformers, and cracking into a hazy ipa. when i think about what things still need making, i imagine experiences that allow people to learn, grow, and build new pathways of understanding, something that lets us see things in the world around us in a new way, or that gives us the opportunity to spend more time doing what we already know and love. that's enough about me though, head over to my 
-                 <button id="about-contact">contact page</button> to reach out, and let me know what you’re thinking about these days.
-                </p>
-                <button id="about-back">back</button>
-              </div>
-              <div id="projects">
-                <div id="project-card-container">
-                  <div class="project-card">
-                    <a href="https://towertime.herokuapp.com/">
-                      <h2 class="project-title">
-                        <span>
-                          towertime
-                        </span>
-                      </h2>
-                      <img
-                        class="project-img"
-                        src="images/projects/towertime.png"
-                        alt="towertime"
-                      />
-                    </a>
-                    <div class="project-techs">
-                      <img src="images/techs/html5.png" alt="" />
-                      <img src="images/techs/css3.png" alt="" />
-                      <img src="images/techs/javascript.png" alt="" />
-                      <img src="images/techs/firebase.png" alt="" />
+            <img src="./images/prof.png" id="prof-pic" alt="headshot" />
+            <div id="intro-text">
+              <h1>hi, i'm adrian</h1>
+              <p>i design and build things online</p>
+            </div>
+            <div id="button-box">
+              <button id="about-btn">about</button>
+              <button id="projects-btn">projects</button>
+              <button id="resume-btn">resume</button>
+              <button id="contact-btn">contact</button>
+            </div>
+            <div id="techs">
+              <img src="./images/techs/html5.png" class="tech-img" alt="html5" />
+              <img src="./images/techs/css3.png" class="tech-img" alt="css3" />
+              <img src="./images/techs/javascript.png" class="tech-img" alt="javascript" />
+              <img src="./images/techs/react.png" class="tech-img" alt="react" />
+              <img src="./images/techs/redux.png" class="tech-img" alt="redux" />
+              <img src="./images/techs/ruby.png" class="tech-img" alt="ruby" />
+              <img src="./images/techs/rails.png" class="tech-img" alt="rails" />
+              <img src="./images/techs/postgresql.png" class="tech-img" alt="postgresql" />
+              <img src="./images/techs/mongodb.png" class="tech-img" alt="mongodb" />
+              <img src="./images/techs/firebase.png" class="tech-img" alt="firebase" />
+              <img src="./images/techs/webpack.png" class="tech-img" alt="webpack" />
+            </div>
+            <div id="tech-name-box">
+              <span id="tech-name"></span>
+            </div>
+          </div>
+          <div id="flip-card-back">
+            <div id="about">
+              <h1>a little about me</h1>
+              <p>
+                i like making things. i also like to think about making things, how best to make them, and how to make
+                them even better. puzzling through complex systems to a working, optimized solution is how i find myself
+                spending my free time, and while i’m doing other things i like to do, like working outdoors, hiking,
+                playing old school platformers, and cracking into a hazy ipa. when i think about what things still need
+                making, i imagine experiences that allow people to learn, grow, and build new pathways of understanding,
+                something that lets us see things in the world around us in a new way, or that gives us the opportunity
+                to spend more time doing what we already know and love. that's enough about me though, head over to my
+                <button id="about-contact">contact page</button> to reach out, and let me know what you’re thinking
+                about these days.
+              </p>
+              <button id="about-back">back</button>
+            </div>
+            <div id="projects">
+              <div id="project-card-container">
+                <div class="project-card">
+                  <a href="https://towertime.herokuapp.com/">
+                    <h2 class="project-title">
+                      <span>
+                        towertime
+                      </span>
+                    </h2>
+                    <div class="project-img-container">
+                      <img class="project-img" src="images/projects/towertime.png" alt="towertime" />
                     </div>
-                    <div class="project-description">
-                      <p>
-                        canvas tower defense game. build, upgrade, and sell
-                        towers to create a maze for enemy creeps, and stop them
-                        from reaching the red square.
-                      </p>
-                    </div>
+                  </a>
+                  <div class="project-techs">
+                    <img src="images/techs/html5.png" alt="" />
+                    <img src="images/techs/css3.png" alt="" />
+                    <img src="images/techs/javascript.png" alt="" />
+                    <img src="images/techs/firebase.png" alt="" />
                   </div>
-                  <div class="project-card">
-                    <a href="https://flipcamp.herokuapp.com/">
-                      <h2 class="project-title">
-                        <span>
-                          flipcamp
-                        </span>
-                      </h2>
-                      <img
-                        class="project-img"
-                        src="images/projects/flipcamp.png"
-                        alt="towertime"
-                      />
-                    </a>
-                    <div class="project-techs">
-                      <img src="images/techs/react.png" alt="" />
-                      <img src="images/techs/redux.png" alt="" />
-                      <img src="images/techs/ruby.png" alt="" />
-                      <img src="images/techs/rails.png" alt="" />
-                      <img src="images/techs/postgresql.png" alt="" />
-                    </div>
-                    <div class="project-description">
-                      <p>
-                        a site clone of hipcamp, where users can sign up to
-                        view, book, review, and get directions to campsites.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="project-card">
-                    <a href="https://camplist-mern.herokuapp.com/">
-                      <h2 class="project-title">
-                        <span>
-                          camplist
-                        </span>
-                      </h2>
-                      <img
-                        class="project-img"
-                        src="images/projects/camplist.png"
-                        alt="towertime"
-                      />
-                    </a>
-                    <div class="project-techs">
-                      <img src="images/techs/react.png" alt="" />
-                      <img src="images/techs/redux.png" alt="" />
-                      <img src="images/techs/express.png" alt="" />
-                      <img src="images/techs/node.png" alt="" />
-                      <img src="images/techs/mongodb.png" alt="" />
-                      <img src="images/techs/google-maps.png" alt="" />
-                    </div>
-                    <div class="project-description">
-                      <p>
-                        search, discover, and create camping spots on bureau of
-                        land management property with filtered searches and
-                        fluid map waypoints.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <button id="projects-back">back</button>
-              </div>
-              <div id="resume">
-                <div id="resume-frame">
-                  <iframe src="https://docs.google.com/document/d/e/2PACX-1vRwBObMC8Wu3T35mERVqdTRK_xyVD7ZAKH9nC9LcMh0qGXxqHIxvpa-H1QUXLDT8H_ZDZrZvvbm0G1a/pub?embedded=true"></iframe>
-                  </iframe>
-                </div>
-                <div id="resume-btns">
-                  <a
-                    href="https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/export?format=pdf"
-                    ><button id="resume-download">save</button></a
-                  >
-                  <button id="resume-back">back</button>
-                </div>
-              </div>
-              <div id="contact">
-                <div id="contact-form">
-                  <div class="thanks" style="display: none;">
-                    <h1>message sent</h1>
+                  <div class="project-description">
                     <p>
-                      thank you for your message, i'll get back to you as soon
-                      as i can
+                      canvas tower defense game. build, upgrade, and sell
+                      towers to create a maze for enemy creeps, and stop them
+                      from reaching the red square.
                     </p>
                   </div>
-                  <form
-                    method="post"
-                    class="gform"
-                    action="https://script.google.com/macros/s/AKfycbwNzX16AJTNlNQ08iRuJOD2xAdA-FOAZHeleg7P9Q/exec"
-                  >
-                    <div class="fields">
-                      <div id="top-fields">
-                        <div class="field">
-                          <label for="name">name</label>
-                          <input
-                            type="text"
-                            name="name"
-                            id="name"
-                            required="required"
-                          />
-                        </div>
-                        <div class="field">
-                          <label for="email">email</label>
-                          <input
-                            type="text"
-                            name="email"
-                            id="email"
-                            required="required"
-                          />
-                        </div>
-                      </div>
-                      <div id="textbox" class="field">
-                        <label for="message">message</label>
-                        <textarea
-                          name="message"
-                          id="message"
-                          required="required"
-                        ></textarea>
-                      </div>
-                      <input
-                        id="honeypot"
-                        type="hidden"
-                        name="honeypot"
-                        value=""
-                      />
+                </div>
+                <div class="project-card">
+                  <a href="https://flipcamp.herokuapp.com/">
+                    <h2 class="project-title">
+                      <span>
+                        flipcamp
+                      </span>
+                    </h2>
+                    <div class="project-img-container">
+                      <img class="project-img" src="images/projects/flipcamp.png" alt="flipcamp-img" />
                     </div>
-                    <button class="send" type="submit">send</button>
-                    <button id="contact-back">back</button>
-                  </form>
+                  </a>
+                  <div class="project-techs">
+                    <img src="images/techs/react.png" alt="" />
+                    <img src="images/techs/redux.png" alt="" />
+                    <img src="images/techs/ruby.png" alt="" />
+                    <img src="images/techs/rails.png" alt="" />
+                    <img src="images/techs/postgresql.png" alt="" />
+                  </div>
+                  <div class="project-description">
+                    <p>
+                      a site clone of hipcamp, where users can sign up to
+                      view, book, review, and get directions to campsites.
+                    </p>
+                  </div>
                 </div>
-                <div id="contact-links">
-                  <a
-                    rel="stylesheet"
-                    href="https://www.linkedin.com/in/adrian-rampy-1b8924198/"
-                    ><img src="images/social/linkedin.png" alt="linkedin"
-                  /></a>
-                  <a rel="stylesheet" href="https://www.facebook.com/ahrampy/"
-                    ><img src="images/social/facebook.png" alt="facebook"
-                  /></a>
-                  <a rel="stylesheet" href="https://www.instagram.com/ahrmpy/"
-                    ><img src="images/social/instagram.png" alt="instagram"
-                  /></a>
-                  <a rel="stylesheet" href="https://github.com/ahrampy"
-                    ><img src="images/social/github.png" alt="github"
-                  /></a>
+                <div class="project-card">
+                  <a href="https://aatimer.netlify.app/">
+                    <h2 class="project-title">
+                      <span>
+                        timer
+                      </span>
+                    </h2>
+                    <div class="project-img-container">
+                      <img class="project-img" src="images/projects/timer.png" alt="timer-img" />
+                    </div>
+                  </a>
+                  <div class="project-techs">
+                    <img src="images/techs/html5.png" alt="" />
+                    <img src="images/techs/css3.png" alt="" />
+                    <img src="images/techs/javascript.png" alt="" />
+                  </div>
+                  <div class="project-description">
+                    <p>
+                      a simple timer app for remote lectures, with themes and localstorage.
+                    </p>
+                  </div>
                 </div>
+                <div class="project-card">
+                  <a href="https://camplist-mern.herokuapp.com/">
+                    <h2 class="project-title">
+                      <span>
+                        camplist
+                      </span>
+                    </h2>
+                    <div class="project-img-container">
+                      <img class="project-img" src="images/projects/camplist.png" alt="camplist-img" />
+                    </div>
+                  </a>
+                  <div class="project-techs">
+                    <img src="images/techs/react.png" alt="" />
+                    <img src="images/techs/redux.png" alt="" />
+                    <img src="images/techs/express.png" alt="" />
+                    <img src="images/techs/node.png" alt="" />
+                    <img src="images/techs/mongodb.png" alt="" />
+                    <img src="images/techs/google-maps.png" alt="" />
+                  </div>
+                  <div class="project-description">
+                    <p>
+                      search, discover, and create camping spots on bureau of
+                      land management property with filtered searches and
+                      fluid map waypoints.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button id="projects-back">back</button>
+            </div>
+            <div id="resume">
+              <div id="resume-frame">
+                <iframe
+                  src="https://docs.google.com/document/d/e/2PACX-1vRwBObMC8Wu3T35mERVqdTRK_xyVD7ZAKH9nC9LcMh0qGXxqHIxvpa-H1QUXLDT8H_ZDZrZvvbm0G1a/pub?embedded=true"></iframe>
+                </iframe>
+              </div>
+              <div id="resume-btns">
+                <a
+                  href="https://docs.google.com/document/d/1NmOAfy1hJpbXuEPgVQ2vwncQM52VaudWlLqLtX6H5X8/export?format=pdf"><button
+                    id="resume-download">save</button></a>
+                <button id="resume-back">back</button>
+              </div>
+            </div>
+            <div id="contact">
+              <div id="contact-form">
+                <div class="thanks" style="display: none;">
+                  <h1>message sent</h1>
+                  <p>
+                    thank you for your message, i'll get back to you as soon
+                    as i can
+                  </p>
+                </div>
+                <form method="post" class="gform"
+                  action="https://script.google.com/macros/s/AKfycbwNzX16AJTNlNQ08iRuJOD2xAdA-FOAZHeleg7P9Q/exec">
+                  <div class="fields">
+                    <div id="top-fields">
+                      <div class="field">
+                        <label for="name">name</label>
+                        <input type="text" name="name" id="name" required="required" />
+                      </div>
+                      <div class="field">
+                        <label for="email">email</label>
+                        <input type="text" name="email" id="email" required="required" />
+                      </div>
+                    </div>
+                    <div id="textbox" class="field">
+                      <label for="message">message</label>
+                      <textarea name="message" id="message" required="required"></textarea>
+                    </div>
+                    <input id="honeypot" type="hidden" name="honeypot" value="" />
+                  </div>
+                  <button class="send" type="submit">send</button>
+                  <button id="contact-back">back</button>
+                </form>
+              </div>
+              <div id="contact-links">
+                <a rel="stylesheet" href="https://www.linkedin.com/in/adrian-rampy-1b8924198/"><img
+                    src="images/social/linkedin.png" alt="linkedin" /></a>
+                <a rel="stylesheet" href="https://www.facebook.com/ahrampy/"><img src="images/social/facebook.png"
+                    alt="facebook" /></a>
+                <a rel="stylesheet" href="https://www.instagram.com/ahrmpy/"><img src="images/social/instagram.png"
+                    alt="instagram" /></a>
+                <a rel="stylesheet" href="https://github.com/ahrampy"><img src="images/social/github.png"
+                    alt="github" /></a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
-    ></script>
-    <script
-      data-cfasync="false"
-      type="text/javascript"
-      src="javascripts/formHandler.js"
-    ></script>
-  </body>
+  </div>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+  <script data-cfasync="false" type="text/javascript" src="javascripts/formHandler.js"></script>
+</body>
+
 </html>

@@ -336,9 +336,16 @@ h1 {
   transition: 0.3s;
 }
 
-.project-img {
-  width: 80%;
+.project-img-container {
+  display: flex;
+  justify-content: center;
+  margin: 5% 10%;
+  height: 50%;
   border-radius: 5px;
+  overflow: hidden;
+}
+
+.project-img {
   filter: grayscale(100%);
   transition: 0.3s;
 }
