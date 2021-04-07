@@ -40,7 +40,7 @@
   #project-card-container {
     width: 95vw;
   }
-  .project-img {
+  .project-img-container {
     display: none;
   }
 
@@ -97,10 +97,19 @@
     justify-content: space-evenly;
     width: 80vw;
     height: 20vh;
+    padding: 1vh;
+  }
+
+  .project-card p {
+    padding-bottom: 1vh;
   }
 
   .project-title {
     margin: 0;
+    padding: 0;
+  }
+
+  .project-description {
     padding: 0;
   }
 
@@ -113,7 +122,7 @@
     padding-top: 1vh;
   }
 
-  .project-img {
+  .project-img-container {
     display: none;
   }
 
@@ -134,5 +143,8 @@
   #prof-pic {
     width: 80px;
     height: 80px;
+  }
+  .project-card {
+    padding: 0;
   }
 }

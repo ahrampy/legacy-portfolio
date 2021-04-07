@@ -405,12 +405,12 @@ h1 {
 }
 
 .project-techs img {
-  width: 25px;
-  height: 25px;
+  width: 3vh;
+  height: 3vh;
 }
 
 .project-description {
-  padding: 2vh;
+  padding: 2vw;
 }
 
 .project-description p {
