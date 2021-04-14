@@ -1,4 +1,4 @@
-### Heyo 👋
+### Hey There 👋
 
 Software Engineer and Online Instructor at [App Academy](https://www.appacademy.io/), teaching the next generation of web developers! Previous elementary and middle school teacher, restaurant manager, skimmer of books, and sound technician.
 
