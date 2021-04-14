@@ -1,11 +1,12 @@
 $(() => {
+  // globals
   let centerX, centerY;
   let tracking = true;
   let mobile = false;
   let colorMode = "light";
-  let currMode = "light";
-  let toggle = null;
   let time = Date.now();
+
+  // functions
   const checkMobile = () => {
     mobile = $(window).innerHeight() < 700 || $(window).innerWidth() < 700;
     mobile ? resetBorder() : showSwitch();
@@ -29,17 +30,15 @@ $(() => {
     $(":root").css("--primary", "#fff");
     $(":root").css("--secondary", "#333");
   };
-  const fadeIcons = () => {
+  const changeColorImg = (src) => {
+    if (mobile) return;
+    $("#lightswitch > img").attr("src", `./images/mode/${src}.png`);
+  };
+  const fadeIconsIn = () => {
     setTimeout(() => {
       $("#techs").css("opacity", "100%");
     }, 1000);
   };
-  // const fadeIn = () => {
-  //   $("#fade-in").animate({ height: "0%" }, { duration: 950, queue: false });
-  //   setTimeout(() => {
-  //     $("#fade-in").css("opacity", 0);
-  //   }, 900);
-  // };
   const findCenter = () => {
     centerX = $("#border-container").width() / 2;
     centerY = $("#border-container").height() / 2;
@@ -58,57 +57,42 @@ $(() => {
     $("#flip-card-front").css("opacity", "100%");
     $("#techs").slick("slickPlay");
   };
+
+  // check system color mode
   window
     .matchMedia("(prefers-color-scheme: dark)")
     .addEventListener("change", (e) => {
       e.matches ? setDark() : setLight();
     });
+
+  // init
   $(window).on("load resize", () => {
     findCenter();
     checkMobile();
     checkDarkMode();
-    fadeIcons();
-    // fadeIn();
+    fadeIconsIn();
   });
-  $("#lightswitch").on("mouseover", () => {
-    if (mobile) return;
-    currMode = colorMode;
-    $("#switch-box").css("opacity", "0");
-    clearTimeout(toggle);
-    toggle = setTimeout(() => {
-      if (colorMode === "light") {
-        $("#lightswitch > img").attr("src", "./images/mode/moon.png");
-      } else {
-        $("#lightswitch > img").attr("src", "./images/mode/sun.png");
-      }
-      $("#switch-box").css("opacity", "1");
-    }, 200);
+
+  // colorMode listeners
+  $("#lightswitch").on("mouseenter", () => {
+    if (colorMode === "light") {
+      changeColorImg("moon");
+    } else {
+      changeColorImg("sun");
+    }
   });
   $("#lightswitch").on("mouseleave", () => {
-    if (mobile) return;
-    if (currMode === colorMode) {
-      $("#switch-box").css("opacity", "0");
-    }
-    clearTimeout(toggle);
-    toggle = setTimeout(() => {
-      if (colorMode === "light") {
-        $("#lightswitch > img").attr("src", "./images/mode/sun-filled.png");
-      } else {
-        $("#lightswitch > img").attr("src", "./images/mode/moon-filled.png");
-      }
-      $("#switch-box").css("opacity", "1");
-    }, 200);
-  });
-  $("#lightswitch").on("click", (e) => {
-    e.preventDefault();
-    currMode = colorMode;
-    clearTimeout(toggle);
     if (colorMode === "light") {
-      setDark();
+      changeColorImg("sun-filled");
     } else {
-      setLight();
+      changeColorImg("moon-filled");
     }
   });
+  $("#lightswitch").on("click", () => {
+    colorMode === "light" ? setDark() : setLight();
+  });
+
+  // background rotation
   $("#border-container").on("mousemove", (e) => {
     if (tracking && !mobile) {
       let checkTime = Date.now();
@@ -129,6 +113,8 @@ $(() => {
       }
     }
   });
+
+  // pause rotation
   $("#resume-frame").hover(
     () => {
       tracking = false;
@@ -138,6 +124,8 @@ $(() => {
       tracking = true;
     }
   );
+
+  // front img slider
   $("#techs").slick({
     vertical: true,
     autoplay: true,
@@ -159,18 +147,15 @@ $(() => {
       $("#tech-name").css("opacity", "0%");
     }
   );
-  $(".project-card").on("click", (e) => {
-    $(e.currentTarget.children[0].trigger("click"));
-  });
-  $("#about-btn").on("click", (e) => {
-    e.preventDefault();
+
+  // about page
+  $("#about-btn").on("click", () => {
     hideFront();
     $("#about").css("display", "inline-block");
     $("#about").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(180deg)");
   });
-  $("#about-back").on("click", (e) => {
-    e.preventDefault();
+  $("#about-back").on("click", () => {
     $("#about").css("opacity", "0%");
     setTimeout(() => {
       $("#about").css("display", "none");
@@ -178,8 +163,7 @@ $(() => {
     $("#flip-card").css("transform", "rotateY(0deg)");
     showFront();
   });
-  $("#about-contact").on("click", (e) => {
-    e.preventDefault();
+  $("#about-contact").on("click", () => {
     $("#about").css("opacity", "0%");
     setTimeout(() => {
       $("#about").css("display", "none");
@@ -191,15 +175,18 @@ $(() => {
       $("#flip-card").css("transform", "rotateY(-180deg)");
     }, 300);
   });
-  $("#projects-btn").on("click", (e) => {
-    e.preventDefault();
+
+  // projects page
+  $("#projects-btn").on("click", () => {
     hideFront();
     $("#projects").css("display", "block");
     $("#projects").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(180deg)");
   });
-  $("#projects-back").on("click", (e) => {
-    e.preventDefault();
+  $(".project-card").on("click", (e) => {
+    $(e.currentTarget.children[0].trigger("click"));
+  });
+  $("#projects-back").on("click", () => {
     $("#projects").css("opacity", "0%");
     setTimeout(() => {
       $("#projects").css("display", "none");
@@ -207,15 +194,15 @@ $(() => {
     $("#flip-card").css("transform", "rotateX(0deg)");
     showFront();
   });
-  $("#resume-btn").on("click", (e) => {
-    e.preventDefault();
+
+  // resume page
+  $("#resume-btn").on("click", () => {
     hideFront();
     $("#resume").css("display", "inline-block");
     $("#resume").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(-180deg)");
   });
-  $("#resume-back").on("click", (e) => {
-    e.preventDefault();
+  $("#resume-back").on("click", () => {
     tracking = true;
     $("#resume").css("opacity", "0%");
     setTimeout(() => {
@@ -224,15 +211,15 @@ $(() => {
     $("#flip-card").css("transform", "rotateX(0deg)");
     showFront();
   });
-  $("#contact-btn").on("click", (e) => {
-    e.preventDefault();
+
+  // contact page
+  $("#contact-btn").on("click", () => {
     hideFront();
     $("#contact").css("display", "inline-block");
     $("#contact").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(-180deg)");
   });
-  $("#contact-back").on("click", (e) => {
-    e.preventDefault();
+  $("#contact-back").on("click", () => {
     $("#contact").css("opacity", "0%");
     setTimeout(() => {
       $("#contact").css("display", "none");
