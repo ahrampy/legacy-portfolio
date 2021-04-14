@@ -1,12 +1,12 @@
 ### Heyo 👋
 
-Online Instructor at [App Academy](https://www.appacademy.io/), teaching the next generation of software developers! Previous elementary and middle school teacher, restaurant manager, sound technician, and skimmer of books.
+Online Instructor at [App Academy](https://www.appacademy.io/), teaching the next generation of software developers! Previous elementary and middle school teacher, restaurant manager, skimmer of books, and sound technician.
 
 In my spare time recently I've been:
 
 🎯 Working on a mobile game in React Native in collab w/ artist [masoncobrien](https://masoncobrien.com/) (it's gonna be awesome)  
-🌞 Hiking, camping, fishing, and generally finding places to sit down   
-🐍 Learning Python and Flask (finally)   
+🌞 Hiking, camping, fishing, and finding new places in nature   
+🐍 Picking up Python and Flask!
 
 Check out my [portfolio](https://www.ahrampy.com), or connect with me via [linkedin](https://www.linkedin.com/in/adrian-rampy-1b8924198/)
 
