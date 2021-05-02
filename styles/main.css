@@ -284,16 +284,14 @@ h1 {
   opacity: 0;
   transition: 0.3s;
   transform: rotateZ(180deg);
-  /* overflow-y: scroll; */
 }
 
 #project-card-container {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: row;
-  /* overflow-x: scroll;
-  height: 70vh; */
+  height: 80vh;
+  overflow-x: scroll;
 }
 
 .project-card {
@@ -301,8 +299,8 @@ h1 {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 2.5vh 2vh;
   margin: 10px;
-  width: 20vw;
-  height: 60vh;
+  width: 18vw;
+  height: 65vh;
   border-radius: 5px;
   transition: 0.3s;
 }
