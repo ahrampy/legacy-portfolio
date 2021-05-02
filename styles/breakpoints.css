@@ -42,8 +42,9 @@
   #project-card-container {
     width: 95vw;
   }
-  .project-img-container {
-    display: none;
+
+  .project-card {
+    background-color: transparent;
   }
 
   .project-description {
@@ -98,7 +99,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: 80vw;
-    height: 20vh;
     padding: 1vh;
   }
 
@@ -114,9 +114,9 @@
   .project-description {
     padding: 0;
   }
-  
+
   .project-img-container {
-    display: none;
+    height: 250px;
   }
 
   #techs {
@@ -127,7 +127,6 @@
   #tech-name {
     padding-top: 1vh;
   }
-
 
   #resume-frame {
     height: 70vh;
@@ -148,6 +147,6 @@
     height: 80px;
   }
   .project-card {
-    padding: 0;
+    background-color: transparent;
   }
 }

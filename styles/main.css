@@ -291,6 +291,7 @@ h1 {
   align-items: center;
   flex-direction: row;
   height: 80vh;
+  width: 90vw;
   overflow-x: scroll;
 }
 
@@ -299,7 +300,7 @@ h1 {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 2.5vh 2vh;
   margin: 10px;
-  width: 18vw;
+  width: 300px;
   height: 65vh;
   border-radius: 5px;
   transition: 0.3s;
