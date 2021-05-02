@@ -16,6 +16,7 @@
   .project-description {
     font-size: small;
   }
+
   #resume-frame {
     height: 65vh;
     width: 95vw;
@@ -37,6 +38,7 @@
   #about-contact {
     font-size: small;
   }
+
   #project-card-container {
     width: 95vw;
   }
@@ -112,6 +114,10 @@
   .project-description {
     padding: 0;
   }
+  
+  .project-img-container {
+    display: none;
+  }
 
   #techs {
     width: 65px;
@@ -122,9 +128,6 @@
     padding-top: 1vh;
   }
 
-  .project-img-container {
-    display: none;
-  }
 
   #resume-frame {
     height: 70vh;
