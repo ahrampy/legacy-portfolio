@@ -242,7 +242,6 @@ h1 {
 }
 
 #flip-card-back {
-
   transform: rotateY(180deg);
 }
 
@@ -326,7 +325,7 @@ h1 {
   display: flex;
   justify-content: center;
   margin: 5% 10%;
-  height: 50%;
+  height: 30vh;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -334,6 +333,7 @@ h1 {
 .project-img {
   filter: grayscale(100%);
   transition: 0.3s;
+  min-width: 30vh;
 }
 
 .project-card:hover .project-img {
