@@ -28,10 +28,11 @@
   <link rel=icon href=images/ar.ico>
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/breakpoints.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="javascripts/jQuery.js"></script>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+
 </head>
 
 <body>
@@ -82,12 +83,16 @@
             <div id="about" style="display: none;">
               <h1>a little about me</h1>
               <p>
-                i like making stuff. puzzling through complex systems to a working, optimized solution is something in which i find endless joy.
-                some other activities i like include refurbishing wood furniture, playing my cello, camping, hiking, and fishing,
+                i like making stuff. puzzling through complex systems to a working, optimized solution is something in
+                which i find endless joy.
+                some other activities i like include refurbishing wood furniture, playing my cello, camping, hiking, and
+                fishing,
                 playing pixely video games, and cracking open a hazy ipa (or hard seltzer) with friends.
                 when i do make stuff, i hope it can allow us to learn, grow, and build new pathways of understanding;
-                let us see the world around us in a new way; or that gives us the opportunity to continue doing what we know and love.
-                that's enough about me though, head over to my <button id="about-contact">contact page</button> to reach out,
+                let us see the world around us in a new way; or that gives us the opportunity to continue doing what we
+                know and love.
+                that's enough about me though, head over to my <button id="about-contact">contact page</button> to reach
+                out,
                 and we can talk about what to do next.
               </p>
               <button id="about-back">back</button>
@@ -252,11 +257,11 @@
                         <input type="text" name="email" id="email" required="required" />
                       </div>
                     </div>
+                    <input id="honeypot" type="hidden" name="honeypot" value="" />
                     <div id="textbox" class="field">
                       <label for="message">message</label>
                       <textarea name="message" id="message" required="required"></textarea>
                     </div>
-                    <input id="honeypot" type="hidden" name="honeypot" value="" />
                   </div>
                   <button class="send" type="submit">send</button>
                   <button id="contact-back">back</button>
