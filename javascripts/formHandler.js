@@ -22,6 +22,8 @@
         return self.indexOf(item) == pos && item;
       });
 
+      console.log(fields);
+
     var formData = {};
     fields.forEach(function (name) {
       var element = elements[name];
