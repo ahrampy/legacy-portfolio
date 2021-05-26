@@ -219,7 +219,8 @@ $(() => {
     $("#contact").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateY(-180deg)");
   });
-  $("#contact-back").on("click", () => {
+  $("#contact-back").on("click", (e) => {
+    e.preventDefault();
     $("#contact").css("opacity", "0%");
     setTimeout(() => {
       $("#contact").css("display", "none");
