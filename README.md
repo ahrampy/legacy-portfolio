@@ -1,6 +1,6 @@
 ### Hey There 👋
 
-Software Engineer and Online Instructor at [App Academy](https://www.appacademy.io/), teaching the next generation of web developers! Previous elementary and middle school teacher, restaurant manager, skimmer of books, and sound technician.
+I'm a Software Engineer. Previous elementary and middle school teacher, restaurant manager, skimmer of books, and sound technician.
 
 In my spare time recently I've been:
 
