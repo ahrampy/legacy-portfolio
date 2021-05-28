@@ -8,6 +8,6 @@ In my spare time recently I've been:
 🌞 Hiking, camping, fishing, and finding new places in nature   
 🐍 Picking up Python and Flask!
 
-Check out my [portfolio](https://www.ahrampy.com), or connect with me via [linkedin](https://www.linkedin.com/in/adrian-rampy-1b8924198/)
+Check out my personal [portfolio](https://www.ahrampy.com), or connect with me via [linkedin](https://www.linkedin.com/in/adrian-rampy-1b8924198/)
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ahrampy&langs_count=8&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
