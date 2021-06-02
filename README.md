@@ -4,9 +4,9 @@ I'm a Software Engineer. I've also been a software instructor, middle school tea
 
 Ask me anything about:
 
-🌞 Some great places to go hiking and camping in Northern California. 
-📚 The intersection of the many forms of education and coding. 
-🍲 Food, rougelite and sim games, or novice woodworking. 
+🌞 Some great places to go hiking and camping in Northern California.  
+📚 The intersection of the many forms of education and coding.  
+🍲 Food, rougelite and sim games, or novice woodworking.  
 
 Check out my personal [portfolio](https://www.ahrampy.com), or connect with me via [linkedin](https://www.linkedin.com/in/adrian-rampy-1b8924198/)
 
