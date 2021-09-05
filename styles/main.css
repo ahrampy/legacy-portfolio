@@ -306,7 +306,6 @@ h1 {
   margin: 10px;
   height: 65vh;
   width: 280px;
-  border-radius: 5px;
   transition: 0.3s;
 }
 
@@ -329,8 +328,7 @@ h1 {
 .project-img-container {
   display: flex;
   justify-content: center;
-  margin: 5% 5%;
-  border-radius: 5px;
+  margin: 5%;
   overflow: hidden;
 }
 
@@ -339,6 +337,7 @@ h1 {
   min-width: 30vh;
   filter: grayscale(100%);
   transition: 0.3s;
+  border-radius: 5px;
 }
 
 .project-card:hover .project-img {
