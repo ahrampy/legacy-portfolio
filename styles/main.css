@@ -285,13 +285,18 @@ h1 {
   transform: rotateZ(180deg);
 }
 
+#project-card-window {
+  width: 85vw;
+  overflow-x: scroll;
+}
+
 #project-card-container {
+  position: relative;
   display: flex;
+  height: 80vh;
+  min-width: fit-content;
   align-items: center;
   flex-direction: row;
-  height: 80vh;
-  width: 90vw;
-  overflow-x: scroll;
 }
 
 .project-card {
@@ -299,8 +304,8 @@ h1 {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 2.5vh 2vh;
   margin: 10px;
-  width: 300px;
   height: 65vh;
+  width: 280px;
   border-radius: 5px;
   transition: 0.3s;
 }
@@ -324,16 +329,16 @@ h1 {
 .project-img-container {
   display: flex;
   justify-content: center;
-  margin: 5% 10%;
-  height: 30vh;
+  margin: 5% 5%;
   border-radius: 5px;
   overflow: hidden;
 }
 
 .project-img {
+  height: 30vh;
+  min-width: 30vh;
   filter: grayscale(100%);
   transition: 0.3s;
-  min-width: 30vh;
 }
 
 .project-card:hover .project-img {
@@ -482,8 +487,6 @@ input[type="text"]:focus {
   box-shadow: 0 0 0 1px var(--secondary);
   outline: none;
 }
-
-
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
