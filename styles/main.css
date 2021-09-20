@@ -307,10 +307,10 @@ h1 {
   height: 65vh;
   width: 280px;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .project-card:hover {
-  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 0px;
 }
