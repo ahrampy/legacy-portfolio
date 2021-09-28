@@ -98,7 +98,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 80vw;
     padding: 1vh;
   }
 
@@ -148,5 +147,14 @@
   }
   .project-card {
     background-color: transparent;
+    width: auto;
+  }
+
+  .project-img-container {
+    height: fit-content;
+  }
+
+  .project-img {
+    height: 35vh;
   }
 }
