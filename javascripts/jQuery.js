@@ -66,11 +66,16 @@ $(() => {
     });
 
   // init
+  $(window).on("load", () => {
+    checkDarkMode();
+    fadeIconsIn();
+  });
+
+  // init listeners
+
   $(window).on("load resize", () => {
     findCenter();
     checkMobile();
-    checkDarkMode();
-    fadeIconsIn();
   });
 
   // colorMode listeners
@@ -182,9 +187,6 @@ $(() => {
     $("#projects").css("display", "block");
     $("#projects").css("opacity", "100%");
     $("#flip-card").css("transform", "rotateX(180deg)");
-  });
-  $(".project-card").on("click", (e) => {
-    $(e.currentTarget.children[0].trigger("click"));
   });
   $("#projects-back").on("click", () => {
     $("#projects").css("opacity", "0%");
